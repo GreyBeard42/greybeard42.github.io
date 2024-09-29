@@ -24,3 +24,11 @@ Files for my Homepage hosted on Neocities
 
 - Contact
   - Links to my Scratch & Github
+
+## [Corn Country](https://greybeard42.neocities.org/corncountry/game)
+
+This is my first ever Javascript project.
+
+It's bad, yet strangely addictive...
+
+It's Cookie Clicker but with much fewer features and corn.
