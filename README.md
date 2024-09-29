@@ -1,7 +1,7 @@
 # homepage
 Files for my Homepage hosted on Neocities
 
-(Check it out!)[https://greybeard42.neocities.org]
+[Check it out!](https://greybeard42.neocities.org)
 
 ---
 
