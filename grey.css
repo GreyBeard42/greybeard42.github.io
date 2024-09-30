@@ -1,0 +1,103 @@
+/* ALL */
+body {
+  text-align: center;
+  color: #9adbc6;
+  background-color: #043022;
+  user-select: none;
+  font-family: "Lucida Console", Verdana, sans-serif;
+  image-rendering: pixelated;
+}
+.topnav {
+  width: 98.5%;
+  padding: 0.1%;
+  position: fixed;
+  background-color: #97f7c7;
+  overflow: hidden;
+}
+.topnav a {
+  float: left;
+  padding: 0.8%;
+}
+.topnav img {
+  width: 100%;
+}
+.titleLink {
+  color: #c6f5e6;
+  background-color: transparent;
+}
+.copywright {
+  position: fixed;
+  bottom: 0;
+  font-family: 'Arial';
+}
+
+/* HOME */
+.hometitle {
+  margin-bottom: 3%;
+  margin-top: 5%;
+}
+.homeBox {
+  border: solid #9adbc6 8px;
+  margin: 3vw 20vw;
+  padding: 1%;
+}
+.homepic {
+  width: 75%;
+  border: 10px solid #9adbc6;
+}
+.homeLink {
+  height: 25%;
+}
+
+/* PROJECTS */
+.project {
+  border: solid #9adbc6 8px;
+  padding: 1%;
+  margin: 1% 20vw;
+}
+.projectLink {
+  height: 10vh;
+}
+.projectPic {
+  margin-top: 3%;
+  width: 75%;
+  border: solid 6px #9adbc6;
+}
+
+/* ART */
+.art {
+  border: solid #9adbc6 6px;
+}
+
+/* Javascript */
+.jscontent {
+  display: grid;
+  grid-template-columns: 32vw 33vw 33vw;
+  margin: auto auto 5% auto;
+}
+.js {
+  margin-bottom: 3%;
+  color: #9adbc6;
+  text-decoration: underline;
+}
+.jsBox {
+  overflow: hidden;
+  font-size: 200%;
+  margin: 2% 2%;
+  border: solid #9adbc6 6px;
+  padding: 1.5% 1%;
+}
+.jsBox img {
+  width: 13em;
+}
+
+/* Photography */
+.content {
+  display: grid;
+  margin: auto auto 5% auto;
+}
+
+
+a {
+  color: #9adbc6;
+}
