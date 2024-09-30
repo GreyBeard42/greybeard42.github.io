@@ -5,7 +5,7 @@ let links = [
   {name: 'Understanding Random', link: 'random', image: 'random/preview.png'},
   {name: 'CSS Tester', link: 'cssTest', image: 'cssTest/preview.png'},
   {name: 'Neural Network Pong', link: 'aipong', image: 'aipong/preview.png'},
-  {name: 'Clearance', link: 'clearance', image: 'clearance/preview.png'},
+  {name: 'Clearance', link: '/../clearance', image: '/../clearance/preview.png'},
   {name: 'Encrypt 2', link: 'encrypt2', image: 'encrypt2/preview.png'},
   {name: 'Bubble Canvas', link: 'bubble', image: 'bubble/preview.png'},
   {name: 'Text Adventure', link: 'canadia', image: 'canadia/preview.png'},
