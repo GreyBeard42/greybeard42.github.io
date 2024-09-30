@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>0 Corn - Corn Country</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="corn.css">
+    <link href="gameImages/favicon.png" rel="shortcut icon" type="image/ico">
+  </head>
+  <body>
+    <div class="topnav">
+	      <a href="https://greybeard42.neocities.org">Back to Homepage</a>
+	      <a href="https://scratch.mit.edu/users/GreyBeard42" target=”_blank”>Scratch</a>
+	      <button onclick="saveGameButt()" class="settings">Save</button> 
+        <button onclick="resetGame()" class="settings">Reset</button>
+        <!--<button onclick="exportGame()" class="settings">Export</button>-->
+	   </div>
+
+<br>
+<div class="left">
+<h1>Corn Country</h1>
+  <!--Stats-->
+    <h3><span id="score">0</span> Corn</h3>
+    <h3><span id="cps">0</span> Per Second</h3>
+  <div class="corn">
+    <!--Corn-->
+  <img src="gameImages/Corn.png" div class="corn" alt="corn" border="0" height="200" width="200" onclick="addToScore(1)">
+   </div>
+   <br>
+   <p>This is my old browser game.</p>
+<br>
+  <br>
+    </div>
+    <center>
+    <!--SHOP-->
+    <div class="shopBorder">
+      <h1 class="shopTitle">Shop</h1>
+  <div class="right" id="shopContainer">
+  <div id="achievementContainer"></div>
+ <!--Butter-->
+    <table class="shopButton" onclick="buyButter()">
+    <tr>
+      <td id="image"><img alt="butter" src="gameImages/Butter.png" width="40px" hight="45px"></td>
+      <td id="nameAndCost">
+        <p>Butter</p>
+        <p><span id="butterCost">15</span> corn</p>
+      </td>
+  <td id="amount"><span id="butter">0</span></td>
+    </tr>
+  </table>
+ <!--Farmer-->
+  <table class="shopButton" onclick="buyFarmer()">
+    <tr>
+      <td id="image"><img alt="farmer" src="gameImages/Farmer.png" width="35px" hight="15px"></td>
+      <td id="nameAndCost">
+        <p>Farmer</p>
+        <p><span id="farmerCost">100</span> corn</p>
+      </td>
+  <td id="amount"><span id="farmer">0</span></td>
+    </tr>
+  </table>
+ <!--Land-->
+  <table class="shopButton" onclick="buyLand()">
+    <tr>
+      <td id="image"><img alt="land" src="gameImages/LAND.png" width="45px" hight="20px"></td>
+      <td id="nameAndCost">
+        <p>Land</p>
+        <p><span id="landCost">1100</span> corn</p>
+      </td>
+  <td id="amount"><span id="land">0</span></td>
+    </tr>
+  </table>
+<!--Popcorn-->
+<table class="shopButton" onclick="buyPopcorn()">
+    <tr>
+      <td id="image"><img alt="popcorn" src="gameImages/popcorn.png" width="70px" hight="60px"></td>
+      <td id="nameAndCost">
+        <p>Popcorn</p>
+        <p><span id="popcornCost">12000</span> corn</p>
+      </td>
+  <td id="amount"><span id="popcorn">0</span></td>
+    </tr>
+  </table>
+<!--GreenHouse-->
+<table class="shopButton" onclick="buyGreen()">
+    <tr>
+      <td id="image"><img alt="greenhouse" src="gameImages/gween.png" width="70px" hight="60px"></td>
+      <td id="nameAndCost">
+        <p>Green House</p>
+        <p><span id="greenCost">130000</span> corn</p>
+      </td>
+  <td id="amount"><span id="green">0</span></td>
+    </tr>
+  </table>
+  <!--Oil-->
+  <table class="shopButton" onclick="buyGass()">
+    <tr>
+      <td id="image"><img alt="oil" src="gameImages/oil.png" width="40px" height="80px"></td>
+      <td id="nameAndCost">
+        <p>Oil</p>
+        <p><span id="gassCost">1400000</span> corn</p>
+      </td>
+  <td id="amount"><span id="gass">0</span></td>
+    </tr>
+  </table>
+  <!--Corn Syrup-->
+  <table class="shopButton" onclick="buySyrup()">
+    <tr>
+      <td id="image"><img alt="cornSyrup" src="gameImages/syrup.png" width="40px"></td>
+      <td id="nameAndCost">
+        <p>Corn Syrup</p>
+        <p><span id="syrupCost">20000000</span> corn</p>
+      </td>
+  <td id="amount"><span id="syrup">0</span></td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  </div>
+  </div>
+        <!--JS-->
+        <script src="corn.js"></script>
+      </center>
+    </body>
+</html>
