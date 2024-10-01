@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js" integrity="sha512-bcfltY+lNLlNxz38yBBm/HLaUB1gTV6I0e+fahbF9pS6roIdzUytozWdnFV8ZnM6cSAG5EbmO0ag0a/fLZSG4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.min.js" integrity="sha512-WzkwpdWEMAY/W8WvP9KS2/VI6zkgejR4/KTxTl4qHx0utqeyVE0JY+S1DlMuxDChC7x0oXtk/ESji6a0lP/Tdg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Clearance - GreyBeard42's Homepage</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.png">
+    <style>
+      body {
+        overflow-x: hidden;
+      }
+      body, ::backdrop {
+        background: #043022;
+      }
+      .track {
+        font-size: 300%;
+        position: fixed;
+        bottom: 2%;
+        white-space: nowrap;
+        will-change: transform;
+        animation: marquee 15s linear infinite;
+      }
+      
+      @keyframes marquee {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); }
+      }
+
+      @keyframes spin {
+          from {
+              transform:rotate(0deg);
+          }
+          to {
+              transform:rotate(360deg);
+          }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://greybeard42.github.io/javascript">Back</a>
+    <a> | </a>
+    <a>This is a fast-paced shopping game. </a>
+    <a target='_blank' href="https://github.com/GreyBeard42/clearance">Github</a>
+    <a><button onclick='fullscreen()'>Fullscreen</button></a>
+    <a style='float: right;'>July 26th, 2024</a>
+    <div id='game'></div>
+    <div style='visibility: hidden;' id='marquee'>
+      <div class="track">
+        <div>&nbsp;Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
