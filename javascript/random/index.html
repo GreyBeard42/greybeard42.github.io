@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js" integrity="sha512-bcfltY+lNLlNxz38yBBm/HLaUB1gTV6I0e+fahbF9pS6roIdzUytozWdnFV8ZnM6cSAG5EbmO0ag0a/fLZSG4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.min.js" integrity="sha512-WzkwpdWEMAY/W8WvP9KS2/VI6zkgejR4/KTxTl4qHx0utqeyVE0JY+S1DlMuxDChC7x0oXtk/ESji6a0lP/Tdg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Understanding Random - GreyBeard42's Homepage</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.png">
+    <style>
+      b {
+        font-size: 135%;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://greybeard42.neocities.org/javascript">Back</a>
+    <a> | </a>
+    <a>I asked <span id='total'></span> people for a random number...</a>
+    <button id='switch'>abc</button>
+    <a style='float: right;'>August 21-24th, 2024</a>
+    
+    <div id="canvas"></div>
+    <div id='num'>
+      <p><b id='even'>0</b> even numbers</p>
+      <p><b id='odd'>0</b> odd numbers</p>
+      <p><b id='prime'>0</b> prime numbers</p>
+      <!--<p><b id='avg'>0</b> average</p>-->
+      <p><b id='ten'>0</b> divisible by ten</p>
+      <p><b id='five'>0</b> divisible by five</p>
+      <p><b id='nine'>0</b> divisible by nine</p>
+      <p><b id='three'>0</b> divisible by three</p>
+    </div>
+    <div id='abc'>
+      <p><i>"random"</i> letters are used in <b id='common'>0</b> of english (e is 11%, q is 0.19%)</p>
+      <p><b id='vowel'>0</b> vowels</p>
+      <p><b id='consonant'>0</b> consonants</p>
+      <p><b id='curved'>0</b> curved (uppercase)</p>
+      <p><b id='straight'>0</b> straight (uppercase)</p>
+      <p><b id='curved2'>0</b> curved (lowercase)</p>
+      <p><b id='straight2'>0</b> straight (lowercase)</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
