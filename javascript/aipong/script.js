@@ -157,4 +157,11 @@ class Ball {
       bot.score++
     }
   }
+  draw() {
+    rect(this.x, this.y, this.width, this.height)
+  }
+}
+
+function collision(a, b) {
+  return((dist(a.x, 0, b.x, 0) < a.width/2+b.width/2) && (dist(a.y, 0, b.y, 0) < a.height/2+b.height/2))
 }
