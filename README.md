@@ -1,7 +1,10 @@
 # homepage
-Files for my Homepage hosted on Neocities
 
-[Check it out!](https://greybeard42.neocities.org)
+Files for my Homepage
+
+My site used to be hosted on [Neocities](https://neocities.org) until I switched to Github Pages :')
+
+[Check it out!](https://greybeard42.github.io)
 
 ---
 
