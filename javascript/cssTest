@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js" integrity="sha512-bcfltY+lNLlNxz38yBBm/HLaUB1gTV6I0e+fahbF9pS6roIdzUytozWdnFV8ZnM6cSAG5EbmO0ag0a/fLZSG4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.min.js" integrity="sha512-WzkwpdWEMAY/W8WvP9KS2/VI6zkgejR4/KTxTl4qHx0utqeyVE0JY+S1DlMuxDChC7x0oXtk/ESji6a0lP/Tdg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>CSS Tester - GreyBeard42's Homepage</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.png">
+    <style>
+      input {
+        background-color: #063627;
+        color: #9adbc6;
+        border: 1px #9adbc6 solid;
+      }
+      input::placeholder {
+        color: #78bfa8;
+      }
+      select {
+        background-color: #063627;
+        color: #9adbc6;
+        border: 1px #9adbc6 solid;
+      }
+      option {
+        background-color: #063627;
+        color: #9adbc6;
+        border: 1px #9adbc6 solid;
+      }
+      #thing {
+        margin-top: 1%;
+        overflow-x: hidden;
+        overflow-y: visible;
+        display: grid;
+        width: max-content;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://greybeard42.neocities.org/javascript">Back</a>
+    <a> | </a>
+    <a>Test CSS styling on Webpage elements! </a>
+    <a target='_blank' href="https://github.com/GreyBeard42/csstester">Github</a>
+    <a style='float: right;'>August 20th, 2024</a>
+    <div id='thing'></div>
+    <script src="script.js"></script>
+  </body>
+</html>
