@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js" integrity="sha512-bcfltY+lNLlNxz38yBBm/HLaUB1gTV6I0e+fahbF9pS6roIdzUytozWdnFV8ZnM6cSAG5EbmO0ag0a/fLZSG4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.min.js" integrity="sha512-WzkwpdWEMAY/W8WvP9KS2/VI6zkgejR4/KTxTl4qHx0utqeyVE0JY+S1DlMuxDChC7x0oXtk/ESji6a0lP/Tdg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Garden - GreyBeard42's Homepage</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.png">
+    
+    <style>
+      #downloadButton {
+        position: absolute;
+        right: 51%;
+      }
+      #canvasDiv {
+        position: fixed;
+        left: 0.5%;
+      }
+      #plants {
+        float: center;
+        display: grid;
+        grid-template-columns: 25% 25%;
+        padding: 0 1% 0 0;
+      }
+      #plant {
+        border: 3px #9adbc6 solid;
+        padding: 2%;
+        float: left;
+        text-align: left;
+        margin: 0 2% 2% 0;
+        background: #063627;
+      }
+      #plant input {
+        width: 80%;
+        float: left;
+        border: 2px #9adbc6 solid;
+        color: #9adbc6;
+        background: #063627;
+      }
+      #plant textarea {
+        width: 80%;
+        border: 2px #9adbc6 solid;
+        color: #9adbc6;
+        background: #063627;
+      }
+      #plant input::placeholder {
+        color: #6eba98;
+      }
+      #plant textarea::placeholder {
+        color: #6eba98;
+      }
+      #plantId {
+        float: right;
+      }
+      .hide {
+        visibility: hidden;
+      }
+      input::file-selector-button {
+        border: 2px #9adbc6 solid;
+        color: #9adbc6;
+        background: #063627;
+      }
+      button {
+        border: 2px #9adbc6 solid;
+        color: #9adbc6;
+        background: #063627;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://greybeard42.neocities.org/javascript">Back</a>
+    <a> | </a>
+    <a>This is a Garden Planner that loads plants.</a>
+    <a style='float: right;'>May 5th, 2024</a>
+    <br>
+    <div id='screen'>
+      <label for='fileSelect'>Load Garden: </label>
+      <input id='fileSelect' type='file' accept='.json'>
+      <a><button id='downloadButton' onclick='downloadSave()' class='hide'>Save As .json File</button></a>
+      <br>
+      <script src="script.js"></script>
+      <div id='canvasDiv'></div>
+      <div id='plants'></div>
+      <button id='add' class='hide'>Add</button>
+    </div>
+  </body>
+</html>
