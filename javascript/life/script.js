@@ -173,7 +173,7 @@ class Prey {
                     this.vision = temp
                 }
             }
-            bestDist = thisdist
+            bestDist = thisDist
         })
     }
     touching(type) {
