@@ -1,5 +1,6 @@
 var content = document.getElementById('jscontent')
 let links = [
+  {name: 'Life', link: 'life', image: 'life/preview.png'},
   {name: 'Encrypt 3', link: 'encrypt3', image: 'encrypt3/preview.png'},
   {name: 'FPV Flight Simulator', link: 'flightsim2', image: 'flightsim2/preview.png'},
   {name: 'Understanding Random', link: 'random', image: 'random/preview.png'},
