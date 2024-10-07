@@ -1,10 +1,16 @@
 /* ALL */
+@font-face {
+  font-family: "Beardy";
+  src: url('homepage.woff2') format('woff2'),
+       url('homepage.woff') format('woff'),
+       url('homepage.ttf') format('truetype');
+}
 body {
   text-align: center;
   color: #9adbc6;
   background-color: #043022;
   user-select: none;
-  font-family: "Lucida Console", Verdana, sans-serif;
+  font-family: "Beardy", sans-serif;
   image-rendering: pixelated;
 }
 .topnav {
@@ -15,8 +21,11 @@ body {
   overflow: hidden;
 }
 .topnav a {
+  color: #2b7f54;
   float: left;
   padding: 0.8%;
+  text-decoration: none;
+  font-size: 250%;
 }
 .topnav img {
   height: 5vh;
@@ -28,18 +37,25 @@ body {
 .copywright {
   position: fixed;
   bottom: 0;
-  font-family: 'Arial';
 }
 
 /* HOME */
 .hometitle {
   margin-bottom: 3%;
   margin-top: 5%;
+  font-size: 8vw;
+  font-weight: 500;
+  color: #c6f5e6;
 }
 .homeBox {
   border: solid #9adbc6 8px;
   margin: 3vw 20vw;
   padding: 1%;
+}
+.homeBox h2 {
+  font-weight: 500;
+  font-size: 5vw;
+  margin: 1vh 0 3vh;
 }
 .homepic {
   width: 75%;
@@ -100,4 +116,5 @@ body {
 
 a {
   color: #9adbc6;
+  text-decoration: none;
 }
