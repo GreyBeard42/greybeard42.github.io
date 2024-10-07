@@ -30,7 +30,7 @@ My site used to be hosted on [Neocities](https://neocities.org) until I switched
 
 ## [Corn Country](https://greybeard42.neocities.org/corncountry/game)
 
-This is my first ever Javascript project.
+Corn Country is my first ever Javascript project.
 
 It's bad, yet strangely addictive...
 

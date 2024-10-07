@@ -1,8 +1,14 @@
+@font-face {
+  font-family: "Beardy";
+  src: url('/homepage.woff2') format('woff2'),
+       url('/homepage.woff') format('woff'),
+       url('/homepage.ttf') format('truetype');
+}
 body {
   user-select: none;
   color: #9adbc6;
   background-color: #043022;
-  font-family: "Lucida Console", Verdana, sans-serif;
+  font-family: "Beardy", sans-serif;
 }
 a {
   color: #9adbc6;
@@ -14,7 +20,7 @@ button {
   color: #9adbc6;
   border: 1px #9adbc6 solid;
   padding: 0.2%;
-  font-family: "Lucida Console", Verdana, sans-serif;
+  font-family: "Beardy", sans-serif;
 }
 textarea {
   background-color: #063627;

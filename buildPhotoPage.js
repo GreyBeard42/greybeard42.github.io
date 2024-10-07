@@ -111,7 +111,7 @@ function smoothScroll(t) {
 
 let topBtn = document.createElement("button")
 topBtn.innerText = 'Scroll to top'
-topBtn.style='position: fixed; bottom: 1%; right: 1%; display: none; font-size: 150%; color: inherit; background-color: inherit; border: 4px solid;'
+topBtn.style='position: fixed; bottom: 1%; right: 1%; display: none; font-size: 150%; font-family: "Beardy", sans-serif; color: inherit; background-color: inherit; border: 4px solid;'
 topBtn.addEventListener('click', () => {
   window.scroll({
   top: 0,
@@ -139,9 +139,8 @@ links.forEach((e) => {
   let txt = document.createElement('a')
   txt.innerText = e.name
   txt.href = "#"+e.link
-  txt.style = 'color: inherit; margin: 0.25%;'
+  txt.style = 'color: inherit; margin: 0.25%; text-decoration: underline;'
   txt.addEventListener("click", () => {
-    event.preventDefault();
     const target = txt.getAttribute('href').substring(1);
     smoothScroll(target)
   })
