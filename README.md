@@ -10,25 +10,19 @@ My site used to be hosted on [Neocities](https://neocities.org) until I switched
 
 ## Pages
 
-- Home
-  - Links to Javascript, Photography, Projects, & Art
+- [Home](https://greybeard42.github.io)
 
-- Javascript
-  - Contains all of my Javascript Projects (Starstrike, Encryption, Clearance, etc.)
+- [Javascript](https://greybeard42.github.io/javascript)
 
-- Photography
-  - Selected photos from my travels
+- [Photography](https://greybeard42.github.io/photography)
 
-- Projects
-  - Links to Javascript, Photography, Github, Scratch, Pixilart, & Corn Country
+- [Projects](https://greybeard42.github.io/projects)
 
-- Art
-  - My pixel art
+- [Art](https://greybeard42.github.io/art)
 
-- Contact
-  - Links to my Scratch & Github
+- [Contact](https://greybeard42.github.io/contact)
 
-## [Corn Country](https://greybeard42.neocities.org/corncountry/game)
+## [Corn Country](https://greybeard42.github.io/corncountry/game)
 
 Corn Country is my first ever Javascript project.
 
