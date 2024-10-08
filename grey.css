@@ -118,3 +118,10 @@ a {
   color: #9adbc6;
   text-decoration: none;
 }
+
+
+@media only screen and (max-width: 570px) {
+  .topnav {
+    position: static;
+  }
+}
