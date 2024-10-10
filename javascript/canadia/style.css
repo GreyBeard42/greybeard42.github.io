@@ -1,7 +1,13 @@
+@font-face {
+  font-family: "Beardy";
+  src: url('/homepage.woff2') format('woff2'),
+       url('/homepage.woff') format('woff'),
+       url('/homepage.ttf') format('truetype');
+}
 body {
   color: #9adbc6;
   background-color: #043022;
-  font-family: "Lucida Console", Verdana, sans-serif;
+  font-family: "Beardy", sans-serif;
 }
 a {
   color: #9adbc6;
@@ -9,7 +15,7 @@ a {
 }
 #game {
   margin-top: 1%;
-  font-family: monospace;
+  font-family: "Beardy", sans-serif;
   position: fixed;
   height: 90%;
   width: 100%;
@@ -43,6 +49,7 @@ a {
   height: 100%;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  font-family: "Beardy", sans-serif;
 }
 #input::placeholder {
   color: #9adbc6;
@@ -55,6 +62,7 @@ a {
   border: 2px solid #9adbc6;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  font-family: "Beardy", sans-serif;
 }
 #outputDiv {
   word-wrap: break-word;

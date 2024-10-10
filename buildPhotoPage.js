@@ -4,8 +4,6 @@ let images = [
   {src: '31aug24/CSC_0185.JPG', alt: 'Some leaves in a park next to Peir 1'},
   {src: '31aug24/DSC_0100.JPG', alt: 'Pier 1 Clock Tower (bayview)'},
   {src: '31aug24/DSC_0213.JPG', alt: 'Pier 1 Clock Tower'},
-  {src: '31aug24/DSC_0092.JPG', alt: "Fisherman's warf (bayview)"},
-  {src: '31aug24/DSC_0229.JPG', alt: 'Pier 1 Ferry Building (bayview)'},
   {src: '31aug24/DSC_0239.JPG', alt: 'Downtown SF (bayview)'},
   {src: '31aug24/DSC_0229.JPG', alt: 'Pier 1 Ferry Building (bayview)'},
   {src: '31aug24/DSC_0097.JPG', alt: "Edge of Fisherman's Warf from Dock"},
@@ -111,7 +109,7 @@ function smoothScroll(t) {
 
 let topBtn = document.createElement("button")
 topBtn.innerText = 'Scroll to top'
-topBtn.style='position: fixed; bottom: 1%; right: 1%; display: none; font-size: 150%; font-family: "Beardy", sans-serif; color: inherit; background-color: inherit; border: 4px solid;'
+topBtn.style='position: fixed; bottom: 1%; right: 1%; display: none; font-size: 150%; font-family: "Beardy", sans-serif; color: inherit; background-color: inherit; border: 0.25vw solid;'
 topBtn.addEventListener('click', () => {
   window.scroll({
   top: 0,

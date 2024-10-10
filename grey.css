@@ -47,7 +47,7 @@ body {
   color: #c6f5e6;
 }
 .homeBox {
-  border: solid #9adbc6 8px;
+  border: solid #9adbc6 0.5vw;
   margin: 3vw 20vw;
   padding: 1%;
 }
@@ -58,7 +58,7 @@ body {
 }
 .homepic {
   width: 75%;
-  border: 10px solid #9adbc6;
+  border: solid #9adbc6 0.75vw;
 }
 .homeLink {
   height: 25%;
@@ -66,7 +66,7 @@ body {
 
 /* PROJECTS */
 .project {
-  border: solid #9adbc6 8px;
+  border: solid #9adbc6 0.5vw;
   padding: 1%;
   margin: 1% 20vw;
 }
@@ -76,12 +76,12 @@ body {
 .projectPic {
   margin-top: 3%;
   width: 75%;
-  border: solid 6px #9adbc6;
+  border: solid 0.5vw #9adbc6;
 }
 
 /* ART */
 .art {
-  border: solid #9adbc6 6px;
+  border: solid #9adbc6 0.5vw;
 }
 
 /* Javascript */
@@ -99,7 +99,7 @@ body {
   overflow: hidden;
   font-size: 200%;
   margin: 2% 2%;
-  border: solid #9adbc6 6px;
+  border: solid #9adbc6 0.3vw;
   padding: 1.5% 1%;
 }
 .jsBox img {

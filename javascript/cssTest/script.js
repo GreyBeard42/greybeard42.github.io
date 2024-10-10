@@ -102,7 +102,7 @@ function update() {
 
     if(opt == 'textarea') dropdown('resize', ['none', 'both', 'horizontal', 'vertical', 'initial', 'inherit'], 'both')
 
-    input('font-family')
+    input('font-family', 'font-family (Try "Beardy")')
     input('fontSize')
 
     dropdown('text-align', ['left', 'right', 'center', 'justify', 'start', 'end', 'initial', 'inherit'], 'center')

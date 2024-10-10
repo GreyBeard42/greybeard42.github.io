@@ -26,6 +26,7 @@ textarea {
   background-color: #063627;
   color: #9adbc6;
   border: 1px #9adbc6 solid;
+  font-family: "Beardy", sans-serif;
 }
 textarea::placeholder {
   color: #78bfa8;
@@ -37,4 +38,7 @@ input {
 }
 input::placeholder {
   color: #78bfa8;
+}
+select {
+  font-family: "Beardy", sans-serif;
 }
