@@ -39,7 +39,6 @@ class Game {
         this.speed = 0
         this.dir = 0
         this.altitude = 0
-        this.momentum = {speed: 0, alt: 0,}
 
         this.flaps = 0
         this.throttle = {x: 0, y: 0}
@@ -118,12 +117,7 @@ class Game {
         vertex(width-temp, height*1.5)
         vertex(-width+temp, height*1.5)
         endShape()
-
-        //CENTER LINES
-        stroke(40, 2, 65)
-        strokeWeight(width/(this.altitude/2+100))
-        //line(0, 0, 0, height)
-
+            
         pop()
     }
     atitudIndctr() {
@@ -325,36 +319,35 @@ class Game {
     }
     physics() {
         //speed
-        let maxSpd = 3
-        if(this.gear) maxSpd -= 0.1
-        maxSpd -= this.angle.y/8
-        let temp = round(this.engine*maxSpd-this.speed)
-        this.speed += temp/700
-        if(this.splr) this.speed -= temp/600
-        if(this.brakes && this.altitude == 0) this.speed -= 0.1
+        let change = (this.engine*(3-this.angle.y/8)-this.speed*1.5)/700
+        if(this.splr) change = 0-abs(change*1.1)
+        if(this.brakes && this.altitiude == 0) change -= 0.1
+        this.speed += change
+        if(this.speed < 0) this.speed = 0
 
-        //angle y
-        let y = map(this.throttle.y/map(this.speed, 125, 600, 100, 0), -height/2, height/2, -90, 90)
-        this.angle.y += ((y+this.angle.y+(this.flaps/50))-this.angle.y)/30
-        if(this.altitude < 0 && this.angle.y<0) this.angle.y += (0-this.angle.y)/50*abs(this.altitude)
-        if(this.altitude == 0 && this.speed < 125) this.angle.y = 0
-        
-        //angle x
-        let x = map(this.throttle.x/map(this.speed, 125, 600, 100, 0), -width/2, width/2, -50, 50)
-        this.angle.x += ((x+this.angle.x)-this.angle.x)/10
-        if(this.altitude < 0 && Math.abs(this.angle.x)>0) this.angle.x += (0-this.angle.x)/25
-        if(this.altitude == 0 && this.speed < 125) this.angle.x = 0
+        //y
+        change = map(this.throttle.y, -height/2, height/2, -0.1, 0.1)
+        change += this.flaps/80
+        change -= max(map(this.speed, 0, 200, 0.25, 0), 0)
+        this.angle.y += change
+        if(this.altitude <= 0 && this.angle.y<0) this.angle.y = 0
+    
+        //x
+        change = map(this.throttle.x, -width/2, width/2, -0.1, 0.1)
+        change /= 2
+        if(this.altitude <= 0) change = 0-this.angle.x/20
+        this.angle.x += change
         this.angle.x *= 1.0001
 
-        //altitude
-        this.altitude += this.angle.y*this.speed/1000
+        change = this.angle.y*(this.speed/1000)
+        change -= 0.1
+        this.altitude += change
         if(this.altitude < 0) {
             this.altitude = 0
-            this.angle.y = 0
+            if(this.angle.y<0) this.angle.y = 0
             this.angle.x = 0
         }
 
-        //dir
         this.dir += this.angle.x/100
     }
 }
