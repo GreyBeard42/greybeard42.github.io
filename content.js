@@ -40,7 +40,7 @@ function setup() {
         ellipseMode(CENTER)
         user = new Beam()
         pumpkins = []
-        dificulty = 750
+        dificulty = 500
         score = 0
         shake = new Shake()
     }
