@@ -11,6 +11,7 @@ body {
   user-select: none;
   font-family: "Beardy", sans-serif;
   image-rendering: pixelated;
+  overflow-x: hidden;
 }
 .topnav {
   width: 98.5%;
@@ -132,4 +133,19 @@ a {
   .hometitle {
     margin-top: 160px;
   }
+}
+
+/*special*/
+.egg {
+  background: #9adbc6;
+  position: fixed;
+  top: 2vh;
+  left: 2vw;
+  border: #9adbc6 solid 0.5vw;
+}
+.open {
+  width: 10vw;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
 }

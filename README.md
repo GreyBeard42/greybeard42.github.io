@@ -22,6 +22,10 @@ My site used to be hosted on [Neocities](https://neocities.org) until I switched
 
 - [Contact](https://greybeard42.github.io/contact)
 
+## Colors
+
+List page colors
+
 ## [Corn Country](https://greybeard42.github.io/corncountry/game)
 
 Corn Country is my first ever Javascript project.
