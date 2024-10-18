@@ -1,3 +1,5 @@
+console.log("Hello fellow nerd!")
+
 let halloween = (new Date().getMonth() == 9)
 let christmas = (new Date().getMonth() == 11)
 let pumpkin
@@ -23,6 +25,8 @@ if(halloween) {
             pumpkin.src = images[0]
             canvas.style.visibility = 'hidden'
         } else {
+            setup()
+            draw = () => {if(halloween && canvas.style.visibility == 'visible') tick()}
             pumpkin.src = images[1]
             canvas.style.visibility = 'visible'
         }

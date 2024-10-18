@@ -24,7 +24,12 @@ My site used to be hosted on [Neocities](https://neocities.org) until I switched
 
 ## Colors
 
-List page colors
+- `#021a12`
+- `#043022`
+- `#9adbc6`
+- `#c6f5e6`
+- `#97f7c7`
+- `#2b7f54`
 
 ## [Corn Country](https://greybeard42.github.io/corncountry/game)
 
