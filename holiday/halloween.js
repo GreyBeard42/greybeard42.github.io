@@ -2,13 +2,6 @@ let user, pumpkins, dificulty, score, shake
 
 function tick() {
     background(0)
-    fill(80, 80, 100)
-    textFont("Beardy")
-    textSize(width/40)
-    textAlign(LEFT, TOP)
-    text("Click to blast those dang pumpkins!   |   Score: "+score, 5, 5)
-    textAlign(RIGHT, TOP)
-    text("Oct 14th, 2024", width-5, 5)
 
     if(frameCount%3==0) user.change()
     if(mouseIsPressed) {
@@ -24,6 +17,14 @@ function tick() {
             p.move()
         }
     })
+
+    fill(80, 80, 100)
+    textFont("Beardy")
+    textSize(width/40)
+    textAlign(LEFT, TOP)
+    text("Click to blast those dang pumpkins!   |   Score: "+score, 5, 5)
+    textAlign(RIGHT, TOP)
+    text("Oct 14th, 2024", width-5, 5)
 }
 
 function over() {
@@ -111,7 +112,7 @@ class Dot {
 class Pumpkin {
     constructor() {
         this.id = pumpkins.length
-        this.x = random(0, width)
+        this.x = random(width/50, width-width/50)
         this.y = 0
         this.health = 10
     }

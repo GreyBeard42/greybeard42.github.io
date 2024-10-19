@@ -1,4 +1,5 @@
-let health, level, kills, weapons, levelWait, sound, autoshoot
+let health, level, kills, weapons, levelWait, sound, slow, shake
+let doShake = true
 let shootSound
 let enemies = []
 let notf = []
@@ -6,19 +7,19 @@ let powerups = []
 let pQueue = []
 
 function setup() {
-  cnvs = createCanvas(windowWidth-15, windowHeight*0.9)
-  cnvs.parent(document.getElementById('canvas'))
+  createCanvas(windowWidth-15, windowHeight*0.9)
 
   shootSound = new p5.Oscillator('sawtooth')
   shootSound.freq(100)
 
   sound = false
-  autoshoot = true
   health = 100
   level = 1
   kills = 0
   weapons = 0
   levelWait = 5
+  slow = 0
+  shake = new Shake()
 
   draw = tick
 
@@ -32,6 +33,8 @@ function setup() {
 // V actualy, draw V
 function tick() {
   background('#313538')
+  shake.update()
+  if(doShake) translate(shake.x, shake.y)
 
   if(health <= 0) die()
 
@@ -45,7 +48,7 @@ function tick() {
     powerUp(item.val, item.x, item.y)
   }
 
-  if(round(random(1, 45)) == 1) addEnemy()
+  if(round(random(1, 45+(min(slow, 8)+1))) == 1) addEnemy()
 
   enemyMove()
 
@@ -55,11 +58,13 @@ function tick() {
 
   notfShow()
 
-  if(mouseIsPressed || autoshoot) attack()
+  attack()
 
+  if(slow>0) slow -= 0.1
+  
   let pqI = 0
   pQueue.forEach((e) => {
-    if(dist(mouseX, mouseY, e.x, e.y) > width/20) {
+    if(dist(mouseX, mouseY, e.x, e.y) > width/10) {
       powerups.push(e)
       pQueue.splice(pqI)
     }
@@ -70,7 +75,7 @@ function tick() {
 }
 
 function sounds() {
-  if((mouseIsPressed || autoshoot) && sound) {
+  if(sound) {
     if(shootSound.started == false) shootSound.start()
   } else {
     shootSound.stop()
@@ -114,8 +119,10 @@ function powerUp(type, x, y) {
     fill('#7977e0')
   } else if(type == 'Health') {
     fill('#cb77e0')
-  } else {
+  } else if(type == "Nuke") {
     fill('#a6db74')
+  } else if(type == 'Slow') {
+    fill('#f7c363')
   }
   noStroke()
   translate(x, y)
@@ -132,8 +139,10 @@ function powerUp(type, x, y) {
     fill('#8a88eb')
   } else if(type == 'Health') {
     fill('#d88feb')
-  } else {
+  } else if(type == 'Nuke') {
     fill('#b4e884')
+  } else if(type == 'Slow') {
+    fill('#f7c363')
   }
   ellipseMode(CENTER)
   ellipse(0, 0, scale)
@@ -170,20 +179,26 @@ function enemyMove() {
     if(item.health <= 0) {
       if(round(random(1, 10)) == 1) {
         let powerup = {}
-        if(round(random(1, 3)) == 1) {
+        let id = round(random(1, 4))
+        if(id == 1) {
           powerup.val = 'Weapons'
-        } else if(round(random(1, 2)) == 1) {
+        } else if(id == 2) {
           powerup.val = 'Health'
-        } else {
+        } else if(id == 3) {
           powerup.val = 'Nuke'
+        } else if(id == 4) {
+          powerup.val = 'Slow'
         }
         powerup.x = item.x
         powerup.y = item.y
         pQueue.push(powerup)
+        //powerups.push(powerup)
       }
 
+      if(enemies[i].x > width/2) shake.request(-width/60)
+      else shake.request(width/60)
       enemies.splice(i, 1)
-      kills++
+      kills++ 
       i = -1
       //Because after this i++
     } else {
@@ -208,13 +223,14 @@ function enemyMove() {
       }
       text(item.health+'/'+item.dHealth, item.x, y)
 
-      item.speed = max(700-level*45, 100)
+      item.speed = max(700-level*50, 100)
 
       if(dist(width/2, height/2, item.x, item.y) < width/18+item.size/2) {
         health -= item.size/1500
       } else {
-        item.x += (width/2-item.x)/item.speed
-        item.y += (height/2-item.y)/item.speed}
+        item.x += ((width/2-item.x)/item.speed)/(min(slow, 8)+1)
+        item.y += ((height/2-item.y)/item.speed)/(min(slow, 8)+1)
+      }
     }
   }
 }
@@ -222,11 +238,11 @@ function enemyMove() {
 function mouse(size) {
   ellipseMode(CENTER)
   noFill()
-  if(mouseIsPressed || autoshoot) {
-    stroke('#64b396')
-  } else {
+  //if(mouseIsPressed) {
+    //stroke('#64b396')
+  //} else {
     stroke('#7dc7ac')
-  }
+  //}
   strokeWeight(size/10)
   ellipse(mouseX, mouseY, size, size)
   line(mouseX-size/2, mouseY, mouseX+size/2, mouseY)
@@ -245,14 +261,12 @@ function info() {
   text('KILLS '+kills, 5, height-(scale*2)-5)
 
   textAlign(RIGHT, BOTTOM)
-  text('v1.1', width-5, height-5)
+  text('v1.2', width-5, height-5)
 }
 
 function addEnemy() {
   enemy = {}
 
-  //enemy.size = width/random(12, 15)-min((level/5), 8)
-  //enemy.size = width/5
   enemy.size = width/(random(12, 15)-min(level/5, 7))
 
   if(round(random(1,2)) == 1) {
@@ -289,22 +303,12 @@ function addEnemy() {
   enemies.push(enemy)
 }
 
-function autoShoot(e) {
-  if(autoshoot) {
-    autoshoot = false
-    e.innerText = 'Autoshoot OFF'
-  } else {
-    autoshoot = true
-    e.innerText = 'Autoshoot ON'
-  }
-}
-
 function attack() {
   //enemies
   for(i = 0; i < enemies.length; i++) {
     let distance = dist(mouseX, mouseY, enemies[i].x, enemies[i].y)
     if(distance < enemies[i].size/2) {
-      enemies[i].health -= round(random(2, 7))+weapons
+      enemies[i].health -= round(random(0, 3.5))+min(weapons, 10)
     }
   }
 
@@ -319,6 +323,8 @@ function attack() {
 
       if(powerups[i].val == 'Nuke') {
         alert.text = 'Nuke Exploded!'
+      } else if(powerups[i].val == 'Slow') {
+        alert.text = 'Slow-Mo Activated!'
       } else {
         alert.text = message
       }
@@ -328,9 +334,13 @@ function attack() {
       if(powerups[i].val == 'Health') {
         health = 100
       } else if(powerups[i].val == 'Weapons') {
-        weapons += 2
-      } else {
+        weapons += 1
+      } else if(powerups[i].val == "Nuke") {
         enemies = []
+        if(powerups[i].x > width/2) shake.request(-width/20)
+        else shake.request(width/20)
+      } else if(powerups[i].val == 'Slow') {
+        slow = 100
       }
 
       powerups.splice(i, 1)
@@ -352,7 +362,6 @@ function die() {
   textSize(width/14)
   strokeWeight(width/350)
   text('Level '+level+' - '+kills+' Kills', width/2, height/2)
-  mouse(width/25)
 }
 
 function lol() {
@@ -364,30 +373,10 @@ function lol() {
   textSize(width/14)
   strokeWeight(width/350)
   text('Paused', width/2, height/2)
-  mouse(width/25)
 }
 
 function keyPressed() {
   if(keyCode == 32) pause()
-  else if(keyCode == 65) {
-    let e = document.getElementById('auto')
-    if(autoshoot) {
-      autoshoot = false
-      e.innerText = 'Autoshoot OFF'
-    } else {
-      autoshoot = true
-      e.innerText = 'Autoshoot ON'
-    }
-  } else if(keyCode == 83) {
-    let e = document.getElementById('sound')
-    if(sound) {
-      sound = false
-      e.innerText = 'Sound OFF'
-    } else {
-      sound = true
-      e.innerText = 'Sound ON'
-    }
-  }
 }
 
 function pause() {
@@ -399,6 +388,46 @@ function pause() {
     } else {
       draw = tick
       e.innerText = 'Pause'
+    }
+  }
+}
+
+function shakeToggle() {
+  if(doShake) {
+    doShake = false
+    document.getElementById('shake').innerText = 'ScreenShake OFF'
+  } else {
+    doShake = true
+    document.getElementById('shake').innerText = 'ScreenShake ON'
+  }
+}
+
+class Shake {
+  constructor() {
+    this.x = 0
+    this.y = 0
+    this.xvel = 0
+    this.time = 0
+    this.step = 0
+    this.target = 0
+  }
+  request(x=-width/50, frames=abs(x/20)+1) {
+    if(round(this.x) == 0) this.shake(x, frames)
+  }
+  shake(x, frames) {
+    this.step = 1
+    this.target = x
+    this.xvel = x/frames
+  }
+  update() {
+    this.x += this.xvel
+    if(this.step == 1 && abs(this.target-this.x) < width/100) this.step = 2
+    if(this.step == 2) this.xvel = (this.target-this.x)/3
+
+    if(this.step == 2 && round(this.x) == round(this.target)) this.step = 0
+    if(this.step == 0) {
+        this.target = 0
+        this.xvel = (this.target-this.x)/3
     }
   }
 }
