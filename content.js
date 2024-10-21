@@ -18,6 +18,7 @@ if(halloween) {
     let images = ["holiday/pumpkin.png", "holiday/pumpkClose.png"]
     pumpkin = document.createElement("img")
     pumpkin.src = images[0]
+    pumpkin.alt = "A Pumpkin icon that opens a halloween mini-game"
     pumpkin.classList.add("open")
     if(location.href.split("/").slice(-1) == "photography.html") pumpkin.style.bottom = "6vh"
     pumpkin.addEventListener("click", () => {
