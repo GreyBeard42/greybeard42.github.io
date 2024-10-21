@@ -4,6 +4,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js" integrity="sha512-bcfltY+lNLlNxz38yBBm/HLaUB1gTV6I0e+fahbF9pS6roIdzUytozWdnFV8ZnM6cSAG5EbmO0ag0a/fLZSG4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.min.js" integrity="sha512-WzkwpdWEMAY/W8WvP9KS2/VI6zkgejR4/KTxTl4qHx0utqeyVE0JY+S1DlMuxDChC7x0oXtk/ESji6a0lP/Tdg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/p5.fillgradient"></script>
+    <script src="https://cdn.jsdelivr.net/gh/GreyBeard42/flightsim2@main/script.js" defer></script>
    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -47,7 +48,7 @@
     <button onclick="togglePopup()"> Controls</button>
     <a style='float: right;'>Sep 21, 2024</a>
     <div id="canvas"></div>
-    <script src="script.js"></script>
+
     <div id="controls">
       <b>CONTROLS</b>
       <p>Engine: +/-</p>
@@ -58,6 +59,16 @@
       <p>Landing Brake: Space</p>
       <p id="close" onclick="togglePopup()">X</p>
     </div>
-    <script src='controls.js'></script>
+    <script>
+      let popup = document.getElementById("controls")
+
+      function togglePopup() {
+        if(popup.style.visibility == 'visible') {
+          popup.style.visibility = 'hidden'
+        } else {
+          popup.style.visibility = 'visible'
+        }
+      }
+    </script>
   </body>
 </html>

@@ -8,11 +8,16 @@ body {
   text-align: center;
   color: #9adbc6;
   background-color: #043022;
-  user-select: none;
   font-family: "Beardy", sans-serif;
   image-rendering: pixelated;
   overflow-x: hidden;
 }
+img {user-select: none;}
+a {
+  color: #9adbc6;
+  text-decoration: none;
+}
+
 .topnav {
   width: 98.5%;
   padding: 0.1%;
@@ -111,11 +116,6 @@ body {
 .content {
   display: grid;
   margin: auto auto 5% auto;
-}
-
-a {
-  color: #9adbc6;
-  text-decoration: none;
 }
 
 @media only screen and (max-width: 1006px) {
