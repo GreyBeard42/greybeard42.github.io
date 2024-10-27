@@ -1,5 +1,10 @@
 console.log("Hello fellow nerd!")
 
+let license = document.createElement('p')
+license.innerHTML = '<a href="https://github.com/GreyBeard42/greybeard42.github.io/blob/main/LICENSE">View License</a> <br> Copyright (c) 2024 <a href="https://github.com/GreyBeard42">GreyBeard42</a>'
+license.classList.add('copyright')
+document.body.appendChild(license)
+
 let halloween = (new Date().getMonth() == 9)
 let christmas = (new Date().getMonth() == 11)
 let pumpkin

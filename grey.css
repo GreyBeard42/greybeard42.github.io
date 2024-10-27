@@ -13,10 +13,7 @@ body {
   overflow-x: hidden;
 }
 img {user-select: none;}
-a {
-  color: #9adbc6;
-  text-decoration: none;
-}
+a {color: #9adbc6;}
 
 .topnav {
   width: 98.5%;
@@ -39,9 +36,13 @@ a {
   color: #c6f5e6;
   background-color: transparent;
 }
-.copywright {
+.copyright {
+  text-align: left;
   position: fixed;
   bottom: 0;
+  padding: 1vh;
+  background: #043022;
+  margin: 1vh 0;
 }
 
 /* HOME */
