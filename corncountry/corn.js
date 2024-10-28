@@ -1,8 +1,6 @@
 console.log("Type the following to hack the game:");
 console.log("score = 1000000000000000");
 
-var cornClick = new Audio('https://greysongrowhomepage.000webhostapp.com/sounds/crnClick.mp3');
-
 var score = 0;
 var cps = 0;
 
