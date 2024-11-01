@@ -1,4 +1,8 @@
-let user, pumpkins, dificulty, score, shake
+let user, pumpkins, dificulty, score, shake, music
+
+function preload() {
+    music = loadSound("/holiday/Halloween.mp3")
+}
 
 function tick() {
     background(0)
@@ -25,6 +29,8 @@ function tick() {
     text("Click to blast those dang pumpkins!   |   Score: "+score, 5, 5)
     textAlign(RIGHT, TOP)
     text("Oct 14th, 2024", width-5, 5)
+
+    if(!music.isPlaying()) music.play()
 }
 
 function over() {
