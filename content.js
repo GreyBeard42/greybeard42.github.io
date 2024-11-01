@@ -44,6 +44,10 @@ function buttons() {
     }
 }
 
+function preload() {
+    if(isHalloween) music = loadSound("/holiday/Halloween.mp3")
+}
+
 function setup() {
     if(isHalloween) {
         let cnvs = createCanvas(windowWidth*0.96-15, windowHeight*0.96-15)
@@ -66,6 +70,7 @@ function draw() {
 
 function halloween() {
     isHalloween = true
+    preload()
     setup()
     buttons()
 }

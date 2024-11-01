@@ -1,9 +1,5 @@
 let user, pumpkins, dificulty, score, shake, music
 
-function preload() {
-    music = loadSound("/holiday/Halloween.mp3")
-}
-
 function tick() {
     background(0)
 
