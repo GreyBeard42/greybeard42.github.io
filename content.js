@@ -19,29 +19,45 @@ let script = document.createElement('script')
 script.src = "holiday/halloween.js"
 document.body.appendChild(script)
 
-if(isHalloween) {
-    let images = ["holiday/pumpkin.png", "holiday/pumpkClose.png"]
-    pumpkin = document.createElement("img")
-    pumpkin.src = images[0]
-    pumpkin.alt = "A Pumpkin icon that opens a halloween mini-game"
-    pumpkin.classList.add("open")
-    if(location.href.split("/").slice(-1) == "photography.html") pumpkin.style.bottom = "6vh"
-    pumpkin.addEventListener("click", () => {
-        if(pumpkin.src.includes(images[1])) {
-            pumpkin.src = images[0]
-            canvas.style.visibility = 'hidden'
-        } else {
-            setup()
-            draw = () => {if(isHalloween && canvas.style.visibility == 'visible') tick()}
-            pumpkin.src = images[1]
-            canvas.style.visibility = 'visible'
-        }
-    })
-    document.body.appendChild(pumpkin)
+buttons()
+
+function buttons() {
+    if(isHalloween) {
+        let images = ["holiday/pumpkin.png", "holiday/pumpkClose.png"]
+        pumpkin = document.createElement("img")
+        pumpkin.src = images[0]
+        pumpkin.alt = "A Pumpkin icon that opens a halloween mini-game"
+        pumpkin.classList.add("open")
+        if(location.href.split("/").slice(-1) == "photography.html") pumpkin.style.bottom = "6vh"
+        pumpkin.addEventListener("click", () => {
+            if(pumpkin.src.includes(images[1])) {
+                pumpkin.src = images[0]
+                canvas.style.visibility = 'hidden'
+            } else {
+                setup()
+                draw = () => {if(isHalloween && canvas.style.visibility == 'visible') tick()}
+                pumpkin.src = images[1]
+                canvas.style.visibility = 'visible'
+            }
+        })
+        document.body.appendChild(pumpkin)
+    }
 }
 
 function setup() {
-    if(isHalloween) halloween()
+    if(isHalloween) {
+        let cnvs = createCanvas(windowWidth*0.96-15, windowHeight*0.96-15)
+        cnvs.parent('canvas')
+
+        colorMode(RGB, 100)
+        rectMode(CENTER)
+        ellipseMode(CENTER)
+        user = new Beam()
+        pumpkins = []
+        dificulty = 500
+        score = 0
+        shake = new Shake()
+    }
 }
 
 function draw() {
@@ -49,15 +65,7 @@ function draw() {
 }
 
 function halloween() {
-    let cnvs = createCanvas(windowWidth*0.96-15, windowHeight*0.96-15)
-    cnvs.parent('canvas')
-
-    colorMode(RGB, 100)
-    rectMode(CENTER)
-    ellipseMode(CENTER)
-    user = new Beam()
-    pumpkins = []
-    dificulty = 500
-    score = 0
-    shake = new Shake()
+    isHalloween = true
+    setup()
+    buttons()
 }
