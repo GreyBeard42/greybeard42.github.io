@@ -33,8 +33,4 @@ My site used to be hosted on [Neocities](https://neocities.org) until I switched
 
 ## [Corn Country](https://greybeard42.github.io/corncountry/game)
 
-Corn Country is my first ever Javascript project.
-
-It's bad, yet strangely addictive...
-
-It's Cookie Clicker but with much fewer features and corn.
+My first ever Javascript project.
