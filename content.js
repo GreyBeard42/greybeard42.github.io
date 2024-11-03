@@ -33,6 +33,7 @@ function buttons() {
             if(pumpkin.src.includes(images[1])) {
                 pumpkin.src = images[0]
                 canvas.style.visibility = 'hidden'
+                music.stop()
             } else {
                 setup()
                 draw = () => {if(isHalloween && canvas.style.visibility == 'visible') tick()}
