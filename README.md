@@ -20,6 +20,8 @@ My site used to be hosted on [Neocities](https://neocities.org) until I switched
 
 - [Art](https://greybeard42.github.io/art)
 
+- [Blog](https://greybeard42.github.io/blog)
+
 - [Contact](https://greybeard42.github.io/contact)
 
 ## Colors
