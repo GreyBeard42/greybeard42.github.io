@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js" integrity="sha512-bcfltY+lNLlNxz38yBBm/HLaUB1gTV6I0e+fahbF9pS6roIdzUytozWdnFV8ZnM6cSAG5EbmO0ag0a/fLZSG4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.min.js" integrity="sha512-WzkwpdWEMAY/W8WvP9KS2/VI6zkgejR4/KTxTl4qHx0utqeyVE0JY+S1DlMuxDChC7x0oXtk/ESji6a0lP/Tdg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      
+    <title>Blog - GreyBeard42's Homepage</title>
+    <link rel="stylesheet" href="grey.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='utf-8'/>
+  </head>
+  <body>
+    <div class="topnav">
+      <a href="/">HOME</a>
+      <a href="javascript">JAVASCRIPT</a>
+      <a href='photography'>PHOTOGRAPHY</a>
+      <a href="projects">PROJECTS</a>
+      <a href="art">ART</a>
+      <a href="blog">BLOG</a>
+      <a href="contact">CONTACT</a>
+    </div>
+    <br>
+    
+    <!--TITLE-->
+    <div id="paper">
+      <div class="blogHeader">
+        <a id='prev' style="float: left; font-size: 1vw; margin-bottom: 1vh;">&lt; previous</a>
+        <a id='next' style="float: right; font-size: 1vw; margin-bottom: 1vh;">next &gt;</a>
+      </div>
+      <div class="blogHeader">
+        <a style="float: left;">Brackets and Bits</a>
+        <a style="float: left; font-size: 1.5vw; margin: 2vw 1vw 0;">By GreyBeard42</a>
+        <a id="date" style="float: right;">Date</a>
+      </div>
+      <div id="columns"></div>
+    </div>
+
+    <script src="blog.js"></script>
+    <script src="content.js"></script>
+
+    <!--
+    DESKTOP NOTIFICATIONS
+    <button onclick="showNotification()">Show Notification</button>
+    <script>
+    function showNotification() {
+        console.log("Notification function called"); // Ensure this logs
+        if (Notification.permission === "granted") {
+            const notification = new Notification("Hello!", { body: "This is a test notification" });
+            notification.onclick = () => {
+                console.log("Notification clicked");
+                window.focus();
+            };
+        } else {
+            console.log("Permission not granted");
+        }
+    }
+    </script>-->
+  </body>
+</html>

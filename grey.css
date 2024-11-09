@@ -119,6 +119,44 @@ a {color: #9adbc6;}
   margin: auto auto 5% auto;
 }
 
+/* Blog */
+#paper {
+  image-rendering: auto;
+  border: #9adbc6 solid 0.4vw;
+  padding: 1vw;
+  margin: 13vh 2vw;
+  background:#043828;
+}
+.blogHeader {overflow: hidden;}
+.blogHeader a {
+  font-size: 4vw;
+  font-weight: 500;
+  color: #c6f5e6;
+}
+#columns {
+  display: flex;
+}
+.column {
+  word-wrap: break-word;
+  text-align: justify;
+  padding: 1%;
+}
+.column h3 {
+  font-size: 2vw;
+  font-weight: 600;
+  margin: 1vh 0;
+  word-wrap: break-word;
+  text-align: left;
+}
+.column p {
+  margin: 0;
+  font-size: 1.3vw;
+}
+.column img {
+  width: 100%;
+  border: 0.25vw solid;
+}
+
 @media only screen and (max-width: 1006px) {
   .topnav a {
     font-size: 150%;

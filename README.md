@@ -26,6 +26,8 @@ My site used to be hosted on [Neocities](https://neocities.org) until I switched
 
 - ![#021a12](https://placehold.co/15x15/021a12/021a12.png) `#021a12`
 - ![#043022](https://placehold.co/15x15/043022/043022.png) `#043022`
+- ![#043828](https://placehold.co/15x15/043828/043828.png)
+`#043828`
 - ![#9adbc6](https://placehold.co/15x15/9adbc6/9adbc6.png) `#9adbc6`
 - ![#c6f5e6](https://placehold.co/15x15/c6f5e6/c6f5e6.png) `#c6f5e6`
 - ![#97f7c7](https://placehold.co/15x15/97f7c7/97f7c7.png) `#97f7c7`
