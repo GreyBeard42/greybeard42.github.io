@@ -1,5 +1,5 @@
 var content = document.getElementById('content')
-let images = [
+let photos = [
   {src: '31aug24/CSC_0181.JPG', alt: 'Pier 1 Clock Tower'},
   {src: '31aug24/CSC_0185.JPG', alt: 'Some leaves in a park next to Peir 1'},
   {src: '31aug24/DSC_0100.JPG', alt: 'Pier 1 Clock Tower (bayview)'},
@@ -158,7 +158,7 @@ columns.push(column1)
 columns.push(column2)
 
 let i = 0
-images.forEach((e) => {
+photos.forEach((e) => {
   if(e.alt != '') {
     let image = document.createElement('img')
     image.src = 'images/photography/'+e.src
@@ -182,7 +182,7 @@ row.appendChild(columns[1])
 content.appendChild(row)
 
 let camera = document.createElement("img")
-camera.src = 'images/camera.png'
+camera.src = 'photos/camera.png'
 camera.style = "width: 10vw; float: center;"
 camera.addEventListener("click", () => {
   //switch
