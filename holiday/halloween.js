@@ -1,4 +1,5 @@
 let user, pumpkins, dificulty, score, shake, music
+let userhasclicked = false
 
 function preload() {
     music = loadSound("/holiday/Halloween.mp3")
@@ -20,6 +21,7 @@ function setup() {
 
 function draw() {
     background(0)
+    if(mouseIsPressed) userhasclicked = true
 
     if(frameCount%3==0) user.change()
     if(mouseIsPressed) {
@@ -44,7 +46,7 @@ function draw() {
     textAlign(RIGHT, TOP)
     text("Oct 14th, 2024", width-5, 5)
 
-    if(!music.isPlaying()) music.play()
+    if(!music.isPlaying() && userhasclicked) music.play()
 }
 
 function over() {
