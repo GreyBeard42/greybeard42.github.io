@@ -182,7 +182,7 @@ row.appendChild(columns[1])
 content.appendChild(row)
 
 let camera = document.createElement("img")
-camera.src = 'photos/camera.png'
+camera.src = 'images/camera.png'
 camera.style = "width: 10vw; float: center;"
 camera.addEventListener("click", () => {
   //switch
