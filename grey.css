@@ -187,4 +187,5 @@ a {color: #9adbc6;}
   position: fixed;
   bottom: 5px;
   right: 5px;
+  z-index: 1000;
 }

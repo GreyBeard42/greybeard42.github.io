@@ -6,72 +6,38 @@ license.classList.add('copyright')
 document.body.appendChild(license)
 
 let isHalloween = (new Date().getMonth() == 9)
-let christmas = (new Date().getMonth() == 11)
-let pumpkin
+let isThankg = (new Date().getMonth() == 10)
+let isChristmas = (new Date().getMonth() == 11)
 
-let canvas = document.createElement('div')
-canvas.id = "canvas"
-canvas.classList.add("egg")
-canvas.style.visibility = 'hidden'
-document.body.appendChild(canvas)
+let iframe = document.createElement("iframe")
+iframe.style = "position: fixed; width: 97vw; height: 97vh; top: 1vh; left: 1vw; border: #9adbc6 solid 0.25vw;"
+iframe.on = false
 
-let script = document.createElement('script')
-script.src = "holiday/halloween.js"
-document.body.appendChild(script)
-
-buttons()
-
-function buttons() {
-    if(isHalloween) {
-        let images = ["holiday/pumpkin.png", "holiday/pumpkClose.png"]
-        pumpkin = document.createElement("img")
-        pumpkin.src = images[0]
-        pumpkin.alt = "A Pumpkin icon that opens a halloween mini-game"
-        pumpkin.classList.add("open")
-        if(location.href.split("/").slice(-1) == "photography.html") pumpkin.style.bottom = "6vh"
-        pumpkin.addEventListener("click", () => {
-            if(pumpkin.src.includes(images[1])) {
-                pumpkin.src = images[0]
-                canvas.style.visibility = 'hidden'
-                music.stop()
-            } else {
-                setup()
-                draw = () => {if(isHalloween && canvas.style.visibility == 'visible') tick()}
-                pumpkin.src = images[1]
-                canvas.style.visibility = 'visible'
-            }
-        })
-        document.body.appendChild(pumpkin)
+let icon = document.createElement("img")
+let images
+if(isHalloween) {
+    images = ["holiday/pumpkin.png", "holiday/pumpkClose.png"]
+    icon.src = images[0]
+    icon.alt = "A Pumpkin icon that opens a Halloween mini-game"
+    iframe.src = "holiday/halloween.html"
+}
+if(isThankg) {
+    images = ["holiday/turkey.png"]
+    icon.src = images[0]
+    icon.alt = "A Turkey icon that opens a Thanksgiving mini-game"
+    iframe.src = "holiday/thanksgiving.html"
+}
+icon.classList.add("open")
+if(location.href.split("/").slice(-1) == "photography.html") icon.style.bottom = "6vh"
+icon.addEventListener("click", () => {
+    if(iframe.on) {
+        iframe.on = false
+        icon.src = images[0]
+        iframe.remove()
+    } else {
+        iframe.on = true
+        if(images.length > 1) icon.src = images[1]
+        document.body.appendChild(iframe)
     }
-}
-
-function preload() {
-    if(isHalloween) music = loadSound("/holiday/Halloween.mp3")
-}
-
-function setup() {
-    if(isHalloween) {
-        let cnvs = createCanvas(windowWidth*0.96-15, windowHeight*0.96-15)
-        cnvs.parent('canvas')
-
-        colorMode(RGB, 100)
-        rectMode(CENTER)
-        ellipseMode(CENTER)
-        user = new Beam()
-        pumpkins = []
-        dificulty = 500
-        score = 0
-        shake = new Shake()
-    }
-}
-
-function draw() {
-    if(isHalloween && canvas.style.visibility == 'visible') tick()
-}
-
-function halloween() {
-    isHalloween = true
-    preload()
-    setup()
-    buttons()
-}
+})
+document.body.appendChild(icon)

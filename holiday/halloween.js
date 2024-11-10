@@ -1,6 +1,24 @@
 let user, pumpkins, dificulty, score, shake, music
 
-function tick() {
+function preload() {
+    music = loadSound("/holiday/Halloween.mp3")
+}
+
+function setup() {
+    let cnvs = createCanvas(windowWidth, windowHeight)
+    cnvs.parent('canvas')
+
+    colorMode(RGB, 100)
+    rectMode(CENTER)
+    ellipseMode(CENTER)
+    user = new Beam()
+    pumpkins = []
+    dificulty = 500
+    score = 0
+    shake = new Shake()
+}
+
+function draw() {
     background(0)
 
     if(frameCount%3==0) user.change()
