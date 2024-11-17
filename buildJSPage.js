@@ -18,7 +18,7 @@ let links = [
   {name: 'Flight Simulator', link: 'flight_sim', repo: 'flightsim@main'},
   {name: 'Encrypt', link: 'encrypt'},
   {name: 'Performance', link: 'performance'},
-  {name: 'FAKE Store', link: 'store'},
+  //{name: 'FAKE Store', link: 'store'},
   {name: 'Graph', link: 'graph'}
 ]
 for(let i=0; i<links.length; i++) {
