@@ -1,5 +1,6 @@
 var content = document.getElementById('jscontent')
 let links = [
+  {name: 'Breakout', link: 'breakout', repo: 'breakout@main'},
   {name: 'Life', link: 'life', repo: 'life@main'},
   {name: 'Encrypt 3', link: 'encrypt3', repo: 'handCipherEncryption@main'},
   {name: 'FPV Flight Simulator', link: 'flightsim2', repo: 'flightsim2@main'},
