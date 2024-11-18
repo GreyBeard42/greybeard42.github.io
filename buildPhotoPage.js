@@ -1,7 +1,7 @@
 var content = document.getElementById('content')
 let photos = [
   {src: 'DSC_1052.JPG', alt: 'A close-up on a rocky mountian littered with shrubs.'},
-  {src: 'DSC_1093.JPG', alt: 'The Blue Angles flying over Oakland'},
+  {src: 'DSC_1090.JPG', alt: 'The Blue Angles flying over Oakland'},
 
   {src: '31aug24/CSC_0181.JPG', alt: 'Pier 1 Clock Tower'},
   {src: '31aug24/DSC_0097.JPG', alt: "Edge of Fisherman's Warf from Dock"},
