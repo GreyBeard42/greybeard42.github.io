@@ -47,6 +47,47 @@ let data = [
         <h3>A Scraped Idea that could have been grand</h3>
         <p>In Late October, I had the idea to try making an incremental game about space travel called Comet Sense. Inspired by <a href=\"https://store.steampowered.com/app/1103100/1000_days_to_escape/\">1000 Days to Escape</a> and <a href=\"https://orteil.dashnet.org/cookieclicker\">Cookie Clicker</a>, I wanted to try and make a unique incremental game loaded with story and conflict. Incremental games are hard to do right. Since there are so many, you have to make something polished and grand without being too simple and familiar. I watched a TED talk titled, <a href=\"https://www.youtube.com/watch?v=6pY7EjqD3QA\">The Four-Letter Code to Selling Anything</a> by Derek Thompson who talked about how content needs to have the perfect combination of novelty and familiarity. I thought I could pull that off with this game. The problem with making a large game with a deep story is to have the motivation to continue and reach a final product. In the case of Comet Sense, I quickly burnt out. I'm pretty confident that was because <b>I didn't map out how the game would play and feel.</b> The most important thing to do before even making the UI of a vast game is to map it out beforehand. I know, I don't want to do that either, I just want to get to making the thing. I'm not much of a game ideas expert, which is why I prefer making simpler games like <a href=\"/javascript/clearance\">Clearance</a> or <a href=\"/javascript/starstrike\">Starstrike.</a> People totally underestimate the difficulty of coming up with game ideas, it's really hard to find that perfect ratio of familiarity.</p>
         `
+    ]},
+    {date: "Nov 24th, 2024", data: [
+        `
+        <h3>A recration of Atari Breakout</h3>
+        <p>Two weeks ago I remade Atari Breakout in <b>p5.js</b>. If you've somehow never heard of this experience, Breakout is a simple paddle game where you have to break a wall of bricks with your ball to gain points. This version is pretty similar except that instead of playing with a joystick, you play with your mouse or arrow keys. Because this game is so simple, I was able to finish it in a little over a day to release it in <a href=\"https://github.com/GreyBeard42/greybeard42.github.io/releases/tag/v4.3.2\">v4.3.2</a>. This game also saves to Local Storage to save your score so you can <b>LITERALLY PLAY FOREVER.</b> This version doesn't actualy get harder or faster at this point because if you somehow haven't noticed; I'm lazy.</p>
+        
+        <br>
+        <img src=\"https://cdn.jsdelivr.net/gh/GreyBeard42/stopwatch@main/preview.png\">
+        <p>A screenshot of The Stopwatch Game</p>
+
+        <h3>The Stopwatch Game</h3>
+        <p>This is an idea I had at the store yesterday. When I'm bored, I try to land my watch's stopwatch on 42 (because The Hitchhiker's Guide to the Galaxy and Jackie Robonson of course). So, I coded this game in an hour where you have to do the same thing for a random number. This game is really just for being bored while waiting in a line or for your computer to update. If you want to beat my highscore of ten points, <a href="/javascript/stopwatch">Click Here!</a></p>
+        `,
+        `
+        <img src='https://cdn.jsdelivr.net/gh/GreyBeard42/breakout@main/preview.png'>
+        <p>A screenshot of my recreation of Breakout with vibrant rainbow bricks.</p>
+        
+        <img src=\"images/art/mossyStream.png\" style=\"image-rendering: pixelated;\">
+        <p>A pixel art recreation of a picture I took this winter of a rushing stream.</p>
+        <div style=\"display: flex;\">
+            <div class=\"column\" style=\"flex: 1;\">
+                <img src=\"images/photography/DSC_1052.JPG\">
+                <p>A close-up on a rocky mountian littered with shrubs.</p>
+            </div>
+            <div class=\"column\" style=\"flex: 1;\">
+                <img src=\"images/photography/DSC_1090.JPG\">
+                <p>The Blue Angles flying in formation.</p>
+            </div>
+        </div>
+        `,
+        `
+        <h3>Thanksgiving Minigame</h3>
+        <p>Because I made a Halloween Minigame last month, I just <b>HAD</b> to make a Thanksgiving one as well <i>(you know I'm making a Christmas one)</i>. This game is <b>weird</b>. I said it. My game is really weird and let me tell you why. To play the game, you must feed a pig as much as you can before it <i>\"passes out\"</i>. It's a pig because it eats like a pig, get it? Anyways different foods do different things to this pig like gain lots of points or make room for seconds. <a href="/holiday/thanksgiving">Click here to play the game!</a></p>
+        
+        <br>
+        <img src=\"images/blog/thanksgiving.png\">
+        <p>A screenshot of the Thanksgiving Minigame</p>
+
+        <h3>A Midsummer Night's Dream</h3>
+        <p>I've been inactive this week because... I got to act in a small adaption of the play \"A Midsummer Night's Dream\". I played as <b>Oberon; the king of the faries</b> and husband of Titania. In the show, I got to cast multiple love spells on people including Titania who fell in love with a donkey. I had a fun time, it was great :)</p>
+        `
     ]}
 ]
 let view = data.length-1
