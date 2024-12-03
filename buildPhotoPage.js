@@ -1,5 +1,20 @@
 var content = document.getElementById('content')
 let photos = [
+  {src: 'nov24/DSC_0790.JPG', alt: 'A beach with a natural arch'},
+  {src: 'nov24/CSC_0803.JPG', alt: 'Two logs on top of a concrete barrier near the beach'},
+  {src: 'nov24/DSC_0792.JPG', alt: 'Concrete barriers next to a flowing river into the ocean'},
+  {src: 'nov24/DSC_0813.JPG', alt: 'A natural arch of rock on the shore of the beach'},
+  {src: 'nov24/CSC_1108.JPG', alt: 'An ocean wave exploding onto rocks'},
+  {src: 'nov24/DSC_0860.JPG', alt: 'The beach at sunset covered in light fog'},
+  {src: 'nov24/DSC_0829.JPG', alt: 'Water rushing ashore the beach'},
+  {src: 'nov24/DSC_1020.JPG', alt: 'A freeze frame of a wave exploding on a rock'},
+  {src: 'nov24/DSC_1035.JPG', alt: 'Clifs on the beach topped with succulents'},
+
+  {src: 'nov24/DSC_0696.JPG', alt: 'The top of a clif on the beach'},
+  {src: 'nov24/CSC_0171.JPG', alt: 'Some succulents on the beach'},
+  {src: 'nov24/CSC_0702.JPG', alt: 'An old power line in front of the beach'},
+  {src: 'nov24/DSC_0131.JPG', alt: 'Two portable lifegard buildings on the beach'},
+
   {src: 'DSC_1052.JPG', alt: 'A close-up on a rocky mountian littered with shrubs.'},
   {src: 'DSC_1090.JPG', alt: 'The Blue Angles flying over Oakland'},
 
@@ -78,6 +93,7 @@ let photos = [
   {src: 'DSC_0695.JPG', alt: 'A rapidly flowing river next to mossy rocks.'}
 ]
 let links = [
+  {name: "Natural Bridges Beach", link: "nov24/DSC_0790.JPG"},
   {name: "Pier 1 - SF", link: "31aug24/CSC_0181.JPG"},
   {name: 'Cargo Ships', link: "31aug24/DSC_0029.JPG"},
   {name: "Rio del Mar", link: "aug24/DSC_0840-min.JPG"},
