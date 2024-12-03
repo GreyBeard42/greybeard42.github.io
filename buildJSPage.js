@@ -1,6 +1,7 @@
 var content = document.getElementById('jscontent')
 let links = [
-  {name: 'The Stopwatch Game', link: 'stopwatch', repo: 'stopwatch@main'},
+  {name: 'Number Art', link: 'numberart', repo: 'numberart@main'},
+  //{name: 'The Stopwatch Game', link: 'stopwatch', repo: 'stopwatch@main'},
   {name: 'Breakout', link: 'breakout', repo: 'breakout@main'},
   {name: 'Life', link: 'life', repo: 'life@main'},
   {name: 'Encrypt 3', link: 'encrypt3', repo: 'handCipherEncryption@main'},

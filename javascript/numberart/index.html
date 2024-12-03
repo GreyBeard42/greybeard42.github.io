@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/gh/GreyBeard42/numberart@main/script.js" defer></script>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Number Art - GreyBeard42's Homepage</title>
+        <link rel="stylesheet" href="../style.css">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+        <style>
+            body {overflow-x: hidden;}
+            #box {
+                margin: 2vh 0;
+                font-family: monospace;
+            }
+            p {
+                margin: 0;
+                flex: 0.1;
+                text-align: center;
+                user-select: none;
+            }
+            select {color: #9adbc6; background: #043022; border-color: #9adbc6;}
+            input {font-family: "Beardy"}
+            button{background: white; border: none; color: black;}
+            #cool{background: #043022; border: 1px solid; color: inherit;}
+        </style>
+    </head>
+    <body>
+        <a href="/javascript">Back</a>
+        <a> | </a>
+        <a>Generated art from number sequences <a href='https://github.com/GreyBeard42/numberart'>Github</a></a>
+        <a style='float: right;'>November 30th, 2024</a>
+        <br>
+        <select id="seq">
+            <option>Prime Numbers</option>
+            <option>Fibonacii Sequence</option>
+            <option>Thue-Morse Sequence</option>
+            <option>Squared Numbers</option>
+            <option>Cubed Numbers</option>
+            <option>Look and Say</option>
+            <option>Collatz (3x+1) Sequence</option>
+            <option>Pell Numbers</option>
+            <option>PI π</option>
+        </select>
+        <label for="hue">Hue Range:</label>
+        <input id="hue" type="range" min="1" max="36" value="36">
+        <label for="amount">Input:</label>
+        <input id="amount" type="number" value="10000" readonly>
+        <button id="cool">Cinematic Mode</button>
+
+        <div id="box"></div>
+        <script src="script.js"></script>
+    </body>
+</html>

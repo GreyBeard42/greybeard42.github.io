@@ -3,7 +3,7 @@ console.log("Hello fellow nerd!")
 let license = document.createElement('p')
 license.innerHTML = '<a href="https://github.com/GreyBeard42/greybeard42.github.io/blob/main/LICENSE">View License</a> <br> Copyright (c) 2024 <a href="https://github.com/GreyBeard42">GreyBeard42</a>'
 license.classList.add('copyright')
-document.body.appendChild(license)
+//document.body.appendChild(license)
 
 let isHalloween = (new Date().getMonth() == 9)
 let isThankg = (new Date().getMonth() == 10)
@@ -26,6 +26,21 @@ if(isThankg) {
     icon.src = images[0]
     icon.alt = "A Turkey icon that opens a Thanksgiving mini-game"
     iframe.src = "holiday/thanksgiving.html"
+}
+if(isChristmas) {
+    let leftBack = document.createElement("div")
+    let rightBack = document.createElement("div")
+    let height = Math.max(document.body.scrollHeight, document.body.offsetHeight,  document.documentElement.clientHeight,  document.documentElement.scrollHeight,  document.documentElement.offsetHeight)
+    leftBack.style = `width: 5vw; height: ${height}px; position: absolute; left: 1vw; top: 0; z-index: -5; background: url(holiday/garland.png); background-repeat: repeat-y; background-size: 100%;`
+    document.body.appendChild(leftBack)
+
+    rightBack.style = `width: 5vw; height: ${height}px; position: absolute; right: 1vw; top: 0; z-index: -5; background: url(holiday/garland.png); background-repeat: repeat-y; background-size: 100%;`
+    document.body.appendChild(rightBack)
+    
+    let back = document.createElement("img")
+    back.src = "holiday/garland.png"
+    back.style = "width: 5vw; height: 35vw; position: absolute; left: 1vw; top: 0; z-index: -5;"
+
 }
 icon.classList.add("open")
 if(location.href.split("/").slice(-1) == "photography.html") icon.style.bottom = "6vh"

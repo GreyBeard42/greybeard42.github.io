@@ -103,6 +103,7 @@ a {color: #9adbc6;}
   text-decoration: underline;
 }
 .jsBox {
+  background: #043022;
   overflow: hidden;
   font-size: 200%;
   margin: 2% 2%;
