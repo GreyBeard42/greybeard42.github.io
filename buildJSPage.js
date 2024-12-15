@@ -1,5 +1,6 @@
 var content = document.getElementById('jscontent')
 let links = [
+  {name: 'Perlin Spill', link: 'perlinspill', repo: 'perlinspill@main'},
   {name: 'Frogger', link: 'frogger', repo: 'frogger@main'},
   {name: 'Number Art', link: 'numberart', repo: 'numberart@main'},
   //{name: 'The Stopwatch Game', link: 'stopwatch', repo: 'stopwatch@main'},

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js" integrity="sha512-bcfltY+lNLlNxz38yBBm/HLaUB1gTV6I0e+fahbF9pS6roIdzUytozWdnFV8ZnM6cSAG5EbmO0ag0a/fLZSG4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdn.jsdelivr.net/gh/GreyBeard42/perlinspill@main/script.js" defer></script>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Perlin Spill - GreyBeard42's Homepage</title>
+        <link rel="stylesheet" href="../style.css">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+        <style>
+            html, body {
+                background: black;
+                color: white;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+            #top {
+                padding: 8px;
+                position: fixed;
+                width: calc(100vw - 30px);
+                background-color: rgb(0%, 0%, 0%, 70%)
+            }
+            #content {
+                width: 100%;
+                font-family: serif;
+                font-weight: bolder;
+            }
+            .row {
+                display: flex;
+                width: 100%;
+            }
+            .item {
+                flex: 1;
+                margin: 0;
+                text-align: center;
+                user-select: none;
+            }
+            main {display: none;}
+            a {color: white;}
+            select {
+                user-select: none;
+                background-color: black;
+                color: white;
+                border: 1px white solid;
+                padding: 0.2%;
+                font-family: "Beardy", sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="top">
+            <a href="/javascript">Back</a>
+            <a> | </a>
+            <a>Art made from Perlin Noise <a href='https://github.com/GreyBeard42/perlinspill'>Github</a></a>
+            <select id="mode">
+                <option>Terrain</option>
+                <option selected>Rainbow</option>
+            </select>
+            <a style='float: right;'>December 11th, 2024</a>
+        </div>
+        <div id="content"></div>
+    </body>
+</html>
