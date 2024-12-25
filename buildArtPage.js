@@ -1,5 +1,6 @@
 var content = document.getElementById('artContent')
 let art = [
+  {image: 'sistine.png', alt: 'A recreation of \"The Creation of Adam\"'},
   {image: 'mossyStream.png', alt: 'A Mossy Stream'},
   {image: 'lakeHills.png', alt: 'Yellow hills with Eucalyptus trees on it\'s tops surrounding a lake.'},
   {image: 'containerShip.png', alt: 'Cargo Ship'},
