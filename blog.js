@@ -88,6 +88,47 @@ let data = [
         <h3>A Midsummer Night's Dream</h3>
         <p>I've been inactive this week because... I got to act in a small adaption of the play \"A Midsummer Night's Dream\". I played as <b>Oberon; the king of the faries</b> and husband of Titania. In the show, I got to cast multiple love spells on people including Titania who fell in love with a donkey. I had a fun time, it was great :)</p>
         `
+    ]},
+    {date: "Jan 16th, 2025", data: [
+        `
+        <h3>Frogger</h3>
+        <p></p>
+        
+        <br>
+        <img src=\"https://cdn.jsdelivr.net/gh/GreyBeard42/numberart@main/preview.png\">
+        <p>A screenshot of my Number Art project</p>
+
+        <h3>Number Art</h3>
+        <p></p>
+        `,
+        `
+        <img src='https://cdn.jsdelivr.net/gh/GreyBeard42/frogger@main/preview.png'>
+        <p>A screenshot of my Frogger recreation</p>
+        
+        <img src=\"images/art/sistne.png\" style=\"image-rendering: pixelated;\">
+        <p>A pixel art recreation of The Creation of Adam on the Sistne Chapple Ceiling.</p>
+        <div style=\"display: flex;\">
+            <div class=\"column\" style=\"flex: 1;\">
+                <img src=\"images/photography/PHOTONAME\">
+                <p></p>
+            </div>
+            <div class=\"column\" style=\"flex: 1;\">
+                <img src=\"images/photography/PHOTONAME\">
+                <p></p>
+            </div>
+        </div>
+        `,
+        `
+        <h3>Perlin Spill</h3>
+        <p></p>
+        
+        <br>
+        <img src=\"space invaders pic\">
+        <p>A screenshot of the Space Invaders recreation.</p>
+
+        <h3>Space Invaders</h3>
+        <p></p>
+        `
     ]}
 ]
 let view = data.length-1
