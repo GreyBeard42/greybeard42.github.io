@@ -89,45 +89,45 @@ let data = [
         <p>I've been inactive this week because... I got to act in a small adaption of the play \"A Midsummer Night's Dream\". I played as <b>Oberon; the king of the faries</b> and husband of Titania. In the show, I got to cast multiple love spells on people including Titania who fell in love with a donkey. I had a fun time, it was great :)</p>
         `
     ]},
-    {date: "Jan 16th, 2025", data: [
+    {date: "Jan 19th, 2025", data: [
         `
         <h3>Frogger</h3>
-        <p></p>
+        <p>At the begining of last month (Dec 9th, '24), I published a recreation of one of my favorite retro videogames; Frogger. The reason why I gravitated towards Frogger was it's graphics. I wanted to capture the retro vibes of early videogames that have been lost over decades. This game took almost two weeks to make with some big break days for Thanksgivng. I watched 15 year old youtube videos, sifted ancient game dumps and used them as reference to recreate the sprites and start development. One of the hardest things with making big games is doing the hard stuff after making the cool visuals. This time, I managed to finish it and get it on my site which is always really rewarding for me to see my project live and play it for a couple days (very fun and helps with bugs). If you want to try out the game, you can play it <b><a href='/javascript/frogger'> on my site</a></b> or <b><a href='https://greybeard4200.itch.io/froggr'> on my new itch profile.</a></b></p>
         
         <br>
         <img src=\"https://cdn.jsdelivr.net/gh/GreyBeard42/numberart@main/preview.png\">
         <p>A screenshot of my Number Art project</p>
 
         <h3>Number Art</h3>
-        <p></p>
+        <p>Number art was a quick little side project I made during Frogger development. I made this to show people how cool math and programming can be. I got the idea from the end of a <a href='https://www.youtube.com/@Vihart'>Vihart</a> video when they color coded different digits. My favorite sequences to look at on Number Art are the Thue-Morse and Fibonacii sequences. <a href='/javascript/numberart'>Check it out!</a></p>
         `,
         `
         <img src='https://cdn.jsdelivr.net/gh/GreyBeard42/frogger@main/preview.png'>
         <p>A screenshot of my Frogger recreation</p>
         
-        <img src=\"images/art/sistne.png\" style=\"image-rendering: pixelated;\">
+        <img src=\"images/art/sistine.png\" style=\"image-rendering: pixelated;\">
         <p>A pixel art recreation of The Creation of Adam on the Sistne Chapple Ceiling.</p>
         <div style=\"display: flex;\">
             <div class=\"column\" style=\"flex: 1;\">
-                <img src=\"images/photography/PHOTONAME\">
-                <p></p>
+                <img src=\"images/photography/nov24/DSC_0790.JPG\">
+                <p>A photo of Natural Bridges Beach</p>
             </div>
             <div class=\"column\" style=\"flex: 1;\">
-                <img src=\"images/photography/PHOTONAME\">
-                <p></p>
+                <img src=\"images/photography/nov24/CSC_0803.JPG\">
+                <p>Logs hanging over a beach-side stream.</p>
             </div>
         </div>
         `,
         `
         <h3>Perlin Spill</h3>
-        <p></p>
+        <p>Perlin Spill came a couple days after Frogger was released and had the same idea as Number Art; I wanted to show people cool math stuff. Perlin Spill is mainly just Perlin Noise; a terrain function made in 1983 for the original Tron movie (thank you wikipedia). Basically, it's the math behind Minecraft generation and Computer Graphics. Perlin Spill was mainly inspired by Dwarf Fortress' graphics. I never played dwarf fortress, I was only ever intrested in how it looked and sounded. So, I found the character set they used in Dwarf Fortress (CP437) and got to work with making my own generated world. <a href='https://greybeard42.github.io/javascript/perlinspill/'>Check it out!</a></p>
         
         <br>
-        <img src=\"space invaders pic\">
-        <p>A screenshot of the Space Invaders recreation.</p>
+        <img src=\"https://cdn.jsdelivr.net/gh/GreyBeard42/perlinspill@main/preview.png\">
+        <p>A screenshot of my Perlin Spill project.</p>
 
         <h3>Space Invaders</h3>
-        <p></p>
+        <p>Space Invaders was almost like my own sequel to Frogger. Obviously, the games have no similarity to each other, but I remade Space Invaders with the same mindset I had making Frogger; I wanted to ressurect retro videogames from their era. The main problem that stopped me from making Space Invaders months ago was the green barriers. The original game's bullets left a crater in the barriers which was hard for me to recreate because of the hitbox logic. I ended up making each barrier a set of columns instead of individual pixels to simplify my workload. Otherwise, the game is pretty similar to the original. <a href='/javascript/spaceinvaders'>Play here</a> or <a href='https://greybeard4200.itch.io/spce-invders'>on itch</a>.</p>
         `
     ]}
 ]
