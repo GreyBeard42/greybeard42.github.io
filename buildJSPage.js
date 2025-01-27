@@ -1,5 +1,6 @@
 var content = document.getElementById('jscontent')
 let links = [
+  {name: 'Cycle', link: 'cycle', repo: 'cycle@main'},
   {name: 'Space Invaders', link: 'spaceinvaders', repo: 'spaceinvaders@main'},
   {name: 'Perlin Spill', link: 'perlinspill', repo: 'perlinspill@main'},
   {name: 'Frogger', link: 'frogger', repo: 'frogger@main'},
