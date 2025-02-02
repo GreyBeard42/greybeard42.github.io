@@ -6,8 +6,10 @@ async function getLatestCommit() {
         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`)
 
         const data = await response.json()
+        console.log(data)
+        let date = new Date(data.commit.author.date)
 
-        document.getElementById("commit").innerHTML = `<a href=\"${data.html_url}\">${data.commit.message} by ${data.commit.author.name}</a>`
+        document.getElementById("commit").innerHTML = `<a href=\"${data.html_url}\">${data.commit.message}</a> by ${data.commit.author.name} on ${date[Symbol.toPrimitive]('string')}`
     } catch (error) {
         document.getElementById("commit").innerHTML = "Error fetching commit"
         console.error("Error fetching commit:", error);
