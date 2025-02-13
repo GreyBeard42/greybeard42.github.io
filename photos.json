@@ -1,5 +1,14 @@
 {
     "photos": [
+        {"src": "8feb25/DSC_0315.JPG", "alt": "A blue house with a cold tree."},
+        {"src": "8feb25/DSC_0478.JPG", "alt": "A bright house hidden by a lush tree."},
+        {"src": "8feb25/CSC_0481.JPG", "alt": "A magnolia tree."},
+        {"src": "8feb25/DSC_0312.JPG", "alt": "A cold city tree in the morning."},
+        {"src": "8feb25/CSC_0325.JPG", "alt": "Pfeiffer street sign"},
+        {"src": "8feb25/CSC_0407.JPG", "alt": "A waymo next to a stop sign."},
+        {"src": "8feb25/CSC_0457.JPG", "alt": "The edge of a sidewalk with the word Fransico etched into the cement."},
+        {"src": "8feb25/CSC_0416.JPG", "alt": "A no skateboards sign."},
+
         { "src": "nov24/DSC_0790.JPG", "alt": "A beach with a natural arch" },
         { "src": "nov24/CSC_0803.JPG", "alt": "Two logs on top of a concrete barrier near the beach" },
         { "src": "nov24/DSC_0792.JPG", "alt": "Concrete barriers next to a flowing river into the ocean" },
@@ -88,6 +97,7 @@
         { "src": "DSC_0695.JPG", "alt": "A rapidly flowing river next to mossy rocks." }
     ],
     "links": [
+        {"name": "Downtown San Fransico", "link": "8feb25/CSC_0325.JPG"},
         { "name": "Natural Bridges Beach", "link": "nov24/DSC_0790.JPG" },
         { "name": "Pier 1 - SF", "link": "31aug24/CSC_0181.JPG" },
         { "name": "Cargo Ships", "link": "31aug24/DSC_0029.JPG" },
