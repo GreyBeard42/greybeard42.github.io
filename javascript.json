@@ -1,4 +1,5 @@
 [
+    {"name": "Conway's Game of Life", "link": "conway", "repo": "conway"},
     {"name": "Pixels", "link": "pixels", "repo": "pixels"},
     {"name": "Cycle", "link": "cycle", "repo": "cycle"},
     {"name": "Space Invaders", "link": "spaceinvaders", "repo": "spaceinvaders"},
