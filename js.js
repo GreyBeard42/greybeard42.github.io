@@ -40,14 +40,24 @@ fetch("javascript.json")
         page(data[id])
     })
 
+function loadScripts(data) {
+    data.scripts.forEach((s) => {
+        if(!s.includes("/")) s = s+"@main/script.js"
+        if(!s.includes("https://")) s = `https://cdn.jsdelivr.net/gh/GreyBeard42/${s}`
+        script(s)
+    })
+}
+
 function page(data) {
     if(data.p5) {
-        script("p5.min.js", true)
+        script("p5.min.js", true).addEventListener("load", () => {
+            if(data.p5Sound) script("p5.sound.min.js").addEventListener("load", () => {loadScripts(data)})
+            else loadScripts(data)
+        })
         if(!data.box) {
             data.box = "canvas"
         }
-    }
-    if(data.p5Sound) script("p5.sound.min.js")
+    } else loadScripts(data)
     
     if(data.HTML) document.body.innerHTML += data.HTML
     if(data.box) {
@@ -68,12 +78,7 @@ function page(data) {
         back.innerText = 'BACK'
         info.innerText = "INFO"
     }
-    
-    data.scripts.forEach((s) => {
-        if(!s.includes("/")) s = s+"@main/script.js"
-        if(!s.includes("https://")) s = `https://cdn.jsdelivr.net/gh/GreyBeard42/${s}`
-        script(s)
-    })
+
     let options = document.createElement("a")
     options.innerHTML = data.options
     if(data.options) {
@@ -117,7 +122,7 @@ function page(data) {
 
 function script(src, p5=false) {
     let script = document.createElement("script")
-    script.src = src
+    script.src = src+"?v=2"
     script.defer = "defer"
     document.head.appendChild(script)
     return script
