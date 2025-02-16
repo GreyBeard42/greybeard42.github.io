@@ -1,27 +1,153 @@
 [
-    {"name": "Conway's Game of Life", "link": "conway", "repo": "conway"},
-    {"name": "Pixels", "link": "pixels", "repo": "pixels"},
-    {"name": "Cycle", "link": "cycle", "repo": "cycle"},
-    {"name": "Space Invaders", "link": "spaceinvaders", "repo": "spaceinvaders"},
-    {"name": "Perlin Spill", "link": "perlinspill", "repo": "perlinspill"},
-    {"name": "Frogger", "link": "frogger", "repo": "frogger"},
-    {"name": "Number Art", "link": "numberart", "repo": "numberart"},
-    {"name": "Breakout", "link": "breakout", "repo": "breakout"},
-    {"name": "Life", "link": "life", "repo": "life"},
-    {"name": "Encrypt 3", "link": "encrypt3", "repo": "handCipherEncryption"},
-    {"name": "FPV Flight Simulator", "link": "flightsim2", "repo": "flightsim2"},
+    {  
+        "name": "Conway's Game of Life",
+        "repo": "conway",
+        "date": "February 5th, 2025",
+        "scripts": ["conway@homepage/script.js"],
+        "p5": "true",
+        "options": "<a>Speed: <input title=speed id=slider type=range min=0 max=10 step=0.1 value=7></a><a>Preset Id: <input title=seed id=code type=range min=0 max=9 value=0></a>",
+        "bigcanvas": "true",
+        "background": "black"
+    },
+    {
+        "name": "Pixels",
+        "repo": "pixels",
+        "date": "February 2nd, 2025",
+        "scripts": ["pixels"],
+        "p5": "true",
+        "options": "<a>Zoom:</a> <input style=margin:0; id=slider type=range min=width max=width*700> <a>Image:</a> <select id=imgselect><option selected>sistine</option><option>containerShip</option><option>mossyStream</option><option>lakeHills</option></select>",
+        "bigcanvas": "true"
+    },
+    {
+        "name": "Cycle",
+        "repo": "cycle",
+        "date": "January 3rd, 2025",
+        "scripts": ["cycle@test/script.js"],
+        "p5": "true",
+        "p5Sound": "true"
+    },
+    {
+        "name": "Space Invaders",
+        "repo": "spaceinvaders",
+        "date": "DECEMBER 20TH 2024",
+        "scripts": ["spaceinvaders@homepage/script.js", "spaceinvaders@homepage/game.js", "spaceinvaders@homepage/player.js", "spaceinvaders@homepage/entities.js"],
+        "p5": "true",
+        "font": "https://cdn.jsdelivr.net/gh/GreyBeard42/spaceinvaders@main/space.ttf",
+        "background": "black"
+    },
+    {
+        "name": "Perlin Spill",
+        "repo": "perlinspill",
+        "date": "December 11th, 2024",
+        "scripts": ["perlinspill"],
+        "options": "<select id=mode><option>Terrain</option><option selected>Rainbow</option></select>",
+        "p5": "true",
+        "box": "content",
+        "style": "https://cdn.jsdelivr.net/gh/GreyBeard42/perlinspill@main/style.css"
+    },
+    {
+        "name": "Frogger",
+        "repo": "frogger",
+        "date": "NOVEMBER 27TH 2024",
+        "scripts": ["frogger@homepage/script.js", "frogger@homepage/level.js", "frogger@homepage/frog.js"],
+        "p5": "true",
+        "p5Sound": "true",
+        "options": "VOLUME <input id=volume type=range min=0 max=100 value=70>",
+        "font": "https://cdn.jsdelivr.net/gh/GreyBeard42/frogger@main/frogger.ttf"
+    },
+    {
+        "name": "Number Art",
+        "repo": "numberart",
+        "date": "November 30th, 2024",
+        "scripts": ["numberart@main/script.js"],
+        "HTML": "<select id=seq><option>Prime Numbers</option><option>Fibonacii Sequence</option><option>Thue-Morse Sequence</option><option>Squared Numbers</option><option>Cubed Numbers</option><option>Look and Say</option><option>Collatz (3x+1) Sequence</option><option>Pell Numbers</option><option>PI π</option></select><label for=hue>Hue Range:</label><input id=hue type=range min=1 max=36 value=36><label for=amount>Input:</label><input id=amount type=number value=10000 readonly><button id=cool>Cinematic Mode</button>",
+        "box": "box",
+        "overflow": "shown",
+        "style": "https://cdn.jsdelivr.net/gh/GreyBeard42/numberart@main/style.css"
+    },
+    {
+        "name": "Breakout",
+        "repo": "breakout",
+        "date": "November 16th, 2024",
+        "scripts": ["breakout", "breakout@main/classes.js"],
+        "options": "<button onclick='localStorage.clear(); setup()'>Reset</button>",
+        "p5": "true"
+    },
+    {
+        "name": "Life",
+        "repo": "life",
+        "date": "October 1st, 2024",
+        "scripts": ["life@homepage/script.js"],
+        "options": "<input type=range id=speed min=0 max=10 step=0.01 value=1>",
+        "p5": "true"
+    },
+    {
+        "name": "Encrypt 3",
+        "repo": "handCipherEncryption",
+        "date": "September 22nd, 2024",
+        "scripts": ["handCipherEncryption"],
+        "style": "https://cdn.jsdelivr.net/gh/GreyBeard42/handCipherEncryption@homepage/style.css",
+        "HTML": "<label for=mode>Switch Mode to: </label><button id=mode>Decrypt</button><br><textarea id=text placeholder=Text></textarea><br><textarea id=key placeholder=Key></textarea><br><p id=title>Encrypted:</p><textarea id=output readonly></textarea><br><button id=copy>copy</button>"
+    },
+    {
+        "name": "FPV Flight Simulator",
+        "repo": "flightsim2",
+        "date": "September 21st, 2024",
+        "scripts": ["https://unpkg.com/p5.fillgradient", "flightsim2", "flightsim2@main/controls.js"],
+        "options": "<button onclick=togglePopup()> Controls</button>",
+        "p5": "true",
+        "style": "https://cdn.jsdelivr.net/gh/GreyBeard42/flightsim2@homepage/style.css",
+        "HTML": "<div id=controls><b>CONTROLS</b><p>Engine: +/-</p><p>Yoke: Mouse</p><p>Gear: G</p><p>Flaps: F</p><p>Spoilers: B</p><p>Landing Brake: Space</p><p id=close onclick=togglePopup()>X</p></div>"
+    },
     {"name": "Understanding Random", "link": "random"},
-    {"name": "CSS Tester", "link": "cssTest", "repo": "cssTester"},
-    {"name": "Neural Network Pong", "link": "aipong"},
-    {"name": "Clearance", "link": "clearance", "repo": "clearance"},
+    {
+        "name": "CSS Tester",
+        "repo": "cssTester",
+        "date": "August 20th, 2024",
+        "scripts": ["csstester"],
+        "style": "https://cdn.jsdelivr.net/gh/GreyBeard42/cssTester@main/style.css"
+    },
+    {"note": "REMOVE ME & PUT ON PRIVATE REPO", "name": "Neural Network Pong", "link": "aipong"},
+    {
+        "name": "Clearance",
+        "repo": "clearance",
+        "scripts": ["clearance@homepage/script.js"],
+        "date": "July 26th, 2024",
+        "options": "<a><button onclick='fullscreen()'>Fullscreen</button></a>",
+        "box": "game",
+        "style": "https://cdn.jsdelivr.net/gh/GreyBeard42/clearance@homepage/style.css",
+        "HTML": "<div style='visibility: hidden;' id='marquee'><div class=track><div>&nbsp;Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale Sale </div></div></div>"
+    },
     {"name": "Encrypt 2", "link": "encrypt2"},
     {"name": "Bubble Canvas", "link": "bubble"},
-    {"name": "Text Adventure", "link": "canadia", "repo": "textadventure"},
+    {
+        "name": "Text Adventure",
+        "repo": "textadventure",
+        "scripts": ["textadventure@main/main.js", "textadventure@main/map.js"],
+        "date": "June 2nd, 2024",
+        "p5": "true",
+        "style": "https://cdn.jsdelivr.net/gh/GreyBeard42/textadventure@main/style.css",
+        "HTML": "<div id=game><div id='shell'><div id='commandBox'><input id='input' placeholder='>Type Command' autocomplete='off' autofocus><button id='submit'>Submit</button></div><div id=outputDiv></div></div><div id='map'></div></div>"
+    },
     {"name": "Garden Planner", "link": "garden"},
     {"name": "Stonks Inc. II", "link": "stonks"},
-    {"name": "Starstrike!", "link": "starstrike", "repo": "starstrike"},
+    {
+        "name": "Starstrike!",
+        "repo": "starstrike",
+        "scripts": ["starstrike"],
+        "date": "April 13th, 2024",
+        "options": "<button onclick=soundToggle(this) id='sound'>Sound OFF</button><button onclick=autoShoot(this) id='auto'>Autoshoot ON</button><button onclick=pause() id='pause'>Pause</button><button onclick=shakeToggle() id='shake'>ScreenShake ON</button>",
+        "p5": "true",
+        "p5Sound": "true"
+    },
     {"name": "Wheat Game", "link": "wheat"},
-    {"name": "Flight Simulator", "link": "flight_sim", "repo": "flightsim"},
+    {
+        "name": "Flight Simulator",
+        "repo": "flightsim",
+        "scripts": ["flightsim"],
+        "date": "Marth 28th, 2024",
+        "p5": "true"
+    },
     {"name": "Encrypt", "link": "encrypt"},
     {"name": "Performance", "link": "performance"},
     {"name": "Graph", "link": "graph"}

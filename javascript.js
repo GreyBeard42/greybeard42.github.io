@@ -7,6 +7,9 @@ fetch("javascript.json")
     for(let i=0; i<links.length; i++) {
       let abox = document.createElement('a')
       abox.href = 'javascript/'+links[i].link
+      //REMOVE .html!!!
+      if(!links[i].link) abox.href = "js.html?p="+encodeURIComponent(links[i].name)
+      else abox.href = "oldjavascript/"+links[i].link+"/index.html"
       abox.alt = links[i].name
       let divBox = document.createElement('div')
       divBox.classList.add('jsBox')
@@ -17,7 +20,7 @@ fetch("javascript.json")
       txt.style = 'text-decoration: underline;'
       let img = document.createElement('img')
       if(links[i].repo) img.src = 'https://cdn.jsdelivr.net/gh/GreyBeard42/'+links[i].repo+'@main/preview.png'
-      else img.src = "javascript/"+links[i].link+"/preview.png"
+      else img.src = "oldjavascript/"+links[i].link+"/preview.png"
       img.alt = 'preview'
       
       divBox.appendChild(txt)
