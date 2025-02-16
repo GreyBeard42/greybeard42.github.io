@@ -50,8 +50,8 @@ function loadScripts(data) {
 
 function page(data) {
     if(data.p5) {
-        script("p5.min.js", true).addEventListener("load", () => {
-            if(data.p5Sound) script("p5.sound.min.js").addEventListener("load", () => {loadScripts(data)})
+        script("https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.2/p5.min.js", true).addEventListener("load", () => {
+            if(data.p5Sound) script("https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.2/addons/p5.sound.min.js").addEventListener("load", () => {loadScripts(data)})
             else loadScripts(data)
         })
         if(!data.box) {
