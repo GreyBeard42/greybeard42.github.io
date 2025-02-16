@@ -42,12 +42,12 @@ fetch("javascript.json")
 
 function page(data) {
     if(data.p5) {
-        script("https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js")
+        script("p5.min.js", true)
         if(!data.box) {
             data.box = "canvas"
         }
     }
-    if(data.p5Sound) script("https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.min.js")
+    if(data.p5Sound) script("p5.sound.min.js")
     
     if(data.HTML) document.body.innerHTML += data.HTML
     if(data.box) {
@@ -115,7 +115,7 @@ function page(data) {
     infoToggle()
 }
 
-function script(src) {
+function script(src, p5=false) {
     let script = document.createElement("script")
     script.src = src
     script.defer = "defer"
