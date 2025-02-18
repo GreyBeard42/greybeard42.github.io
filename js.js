@@ -101,6 +101,7 @@ async function page(data) {
     }
     //Load Scripts
     if(data.p5) {
+        console.log("YES P5")
         await script("https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.2/p5.min.js", true)
     }
     if(data.p5Sound) {
@@ -115,6 +116,7 @@ async function page(data) {
     document.title = data.name+" - GreyBeard42's Homepage"
     date.innerText = data.date
     //make info tab
+    console.log("ended page build")
     makeInfo(data)
     infoToggle()
 }
@@ -124,7 +126,10 @@ function script(src) {
         let script = document.createElement("script")
         script.src = src
         document.head.appendChild(script)
-        script.onload = () => resolve(`Script ${src} loaded`)
+        script.onload = () => {
+            console.log(`Script ${src} loaded`)
+            resolve(`Script ${src} loaded`)
+        }
         script.onerror = () => reject(new Error(`Script ${src} failed to load`))
     })
 }
@@ -210,9 +215,6 @@ function makeInfo(data) {
                         if(file.status === 403) extra = ", API Limit"
                         console.log(`Failed to fetch commit data:\nError ${file.status}${extra}`)
                     }
-                })
-                .then(data => {
-                    
                 })
         })
 }
