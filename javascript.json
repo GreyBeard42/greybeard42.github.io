@@ -22,7 +22,7 @@
         "name": "Cycle",
         "repo": "cycle",
         "date": "January 3rd, 2025",
-        "scripts": ["cycle@test/script.js"],
+        "scripts": ["cycle@main/script.js"],
         "p5": "true",
         "p5Sound": "true"
     },
@@ -146,7 +146,8 @@
         "repo": "flightsim",
         "scripts": ["flightsim"],
         "date": "Marth 28th, 2024",
-        "p5": "true"
+        "p5": "true",
+        "p5Sound": "true"
     },
     {"name": "Encrypt", "link": "encrypt"},
     {"name": "Performance", "link": "performance"},

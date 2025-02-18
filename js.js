@@ -1,5 +1,6 @@
 console.log("Hello fellow nerd!")
 
+/* This code would hard reload the page on an error :skull: it was a nightmare
 window.onerror = () => {
     const url = new URL(window.location.href);
     if(!url.searchParams.has("reload")) {
@@ -16,7 +17,7 @@ window.addEventListener("load", function () {
         url.searchParams.delete("reload")
         window.history.replaceState(null, "", url.pathname + url.search)
     }
-})
+}) */
 
 fetch("javascript.json")
     .then(file => file.json())
@@ -40,52 +41,39 @@ fetch("javascript.json")
         page(data[id])
     })
 
-function loadScripts(data) {
-    data.scripts.forEach((s) => {
-        if(!s.includes("/")) s = s+"@main/script.js"
-        if(!s.includes("https://")) s = `https://cdn.jsdelivr.net/gh/GreyBeard42/${s}`
-        script(s)
-    })
-}
-
-function page(data) {
-    if(data.p5) {
-        script("https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.2/p5.min.js", true).addEventListener("load", () => {
-            if(data.p5Sound) script("https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.2/addons/p5.sound.min.js").addEventListener("load", () => {loadScripts(data)})
-            else loadScripts(data)
-        })
-        if(!data.box) {
-            data.box = "canvas"
-        }
-    } else loadScripts(data)
-    
+async function page(data) {
+    //Load HTML additions
     if(data.HTML) document.body.innerHTML += data.HTML
+    //Change box name
+    if(!data.box) {
+        data.box = "canvas"
+    }
     if(data.box) {
         let box = document.createElement("div")
         box.id = data.box
         document.body.appendChild(box)
     }
+    //Overflow
     if(data.overflow === "shown") document.body.style = "overflow-y: scroll;"
-
-    if(data.style) {
-        let style = document.createElement("link")
-        style.rel = "stylesheet"
-        style.href = data.style
-        document.head.appendChild(style)
-    }
-
+    //Upercase text for Frogger
     if(data.name === "Frogger") {
         back.innerText = 'BACK'
         info.innerText = "INFO"
     }
-
+    //Load inputs/options
     let options = document.createElement("a")
     options.innerHTML = data.options
     if(data.options) {
         document.getElementById("date").before(options)
         if(data.name !== "Frogger") info.innerHTML += " <b>|</b>"
     }
-
+    //Load style
+    if(data.style) {
+        let style = document.createElement("link")
+        style.rel = "stylesheet"
+        style.href = data.style
+        document.head.appendChild(style)
+    }
     if(data.bigcanvas) {
         document.getElementById(data.box).classList.add("bigcanvas")
         document.getElementById("back").style = "color: white;"
@@ -102,7 +90,7 @@ function page(data) {
         options.style = "color: white;"
         document.getElementById("top").style = "background-color: rgba(100, 100, 100, 0.15);"
     }
-
+    //Load custom fonts
     if(data.font) {
         let fontFile = new FontFace(
             "Custom Font",
@@ -111,21 +99,34 @@ function page(data) {
         document.fonts.add(fontFile)
         document.body.style.fontFamily = "Custom Font, Beardy, sans-serif"
     }
-
+    //Load Scripts
+    if(data.p5) {
+        await script("https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.2/p5.min.js", true)
+    }
+    if(data.p5Sound) {
+        await script("https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.2/addons/p5.sound.min.js")
+    }
+    for (let s of data.scripts) {
+        if(!s.includes("/")) s = s+"@main/script.js"
+        if(!s.includes("https://")) s = `https://cdn.jsdelivr.net/gh/GreyBeard42/${s}`
+        await script(s)
+    }
+    //Set page title
     document.title = data.name+" - GreyBeard42's Homepage"
     date.innerText = data.date
-
+    //make info tab
     makeInfo(data)
-
     infoToggle()
 }
 
-function script(src, p5=false) {
-    let script = document.createElement("script")
-    script.src = src+"?v=2"
-    script.defer = "defer"
-    document.head.appendChild(script)
-    return script
+async function script(src) {
+    return new Promise((resolve, reject) => {
+        let script = document.createElement("script")
+        script.src = src
+        document.head.appendChild(script)
+        script.onload = () => resolve(`Script ${src} loaded`)
+        script.onerror = () => reject(new Error(`Script ${src} failed to load`))
+    })
 }
 
 function makeInfo(data) {
@@ -170,38 +171,48 @@ function makeInfo(data) {
         })
         .then(() => {
             fetch(`https://api.github.com/repos/greybeard42/${data.repo}/commits/main`)
-                .then(file => file.json())
+                .then(file => {
+                    if(file.ok) {
+                        let data = file.json()
+
+                        let commit = document.createElement('a')
+                        commit.innerText = "Latest Commit:"
+                        commit.style = "display: block; margin-top: 1.5em;"
+                        infobox.appendChild(commit)
+
+                        let commitbox = document.createElement("div")
+                        commitbox.classList.add("readme")
+                        commitbox.style = "margin-bottom: 30px;"
+
+                        let cmessage = document.createElement("h1")
+                        cmessage.innerText = data.commit.message
+                        commitbox.appendChild(cmessage)
+
+                        let when = document.createElement('a')
+                        let d = new Date(data.commit.author.date)
+                        when.innerText = `${d.getHours()%12}:${d.getMinutes()} ${["AM", "PM"][Math.round(d.getHours()/12-1)]} - ${d.getMonth()+1}/${d.getDate()}/${d.getFullYear()}`
+                        when.style = "display: block;"
+                        commitbox.appendChild(when)
+
+                        let changet = document.createElement('h3')
+                        changet.innerText = "Changed Files:"
+                        commitbox.appendChild(changet)
+
+                        data.files.forEach((f) => {
+                            let change = document.createElement('p')
+                            change.innerText = "- "+f.filename
+                            commitbox.appendChild(change)
+                        })
+
+                        infobox.appendChild(commitbox)
+                    } else {
+                        let extra = ""
+                        if(file.status === 403) extra = ", API Limit"
+                        console.log(`Failed to fetch commit data:\nError ${file.status}${extra}`)
+                    }
+                })
                 .then(data => {
-                    let commit = document.createElement('a')
-                    commit.innerText = "Latest Commit:"
-                    commit.style = "display: block; margin-top: 1.5em;"
-                    infobox.appendChild(commit)
-
-                    let commitbox = document.createElement("div")
-                    commitbox.classList.add("readme")
-                    commitbox.style = "margin-bottom: 30px;"
-
-                    let cmessage = document.createElement("h1")
-                    cmessage.innerText = data.commit.message
-                    commitbox.appendChild(cmessage)
-
-                    let when = document.createElement('a')
-                    let d = new Date(data.commit.author.date)
-                    when.innerText = `${d.getHours()%12}:${d.getMinutes()} ${["AM", "PM"][Math.round(d.getHours()/12-1)]} - ${d.getMonth()+1}/${d.getDate()}/${d.getFullYear()}`
-                    when.style = "display: block;"
-                    commitbox.appendChild(when)
-
-                    let changet = document.createElement('h3')
-                    changet.innerText = "Changed Files:"
-                    commitbox.appendChild(changet)
-
-                    data.files.forEach((f) => {
-                        let change = document.createElement('p')
-                        change.innerText = "- "+f.filename
-                        commitbox.appendChild(change)
-                    })
-
-                    infobox.appendChild(commitbox)
+                    
                 })
         })
 }
