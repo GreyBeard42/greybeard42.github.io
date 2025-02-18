@@ -101,8 +101,7 @@ async function page(data) {
     }
     //Load Scripts
     if(data.p5) {
-        console.log("YES P5")
-        await script("https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.2/p5.min.js", true)
+        await script("https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.2/p5.min.js")
     }
     if(data.p5Sound) {
         await script("https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.2/addons/p5.sound.min.js")
@@ -123,6 +122,7 @@ async function page(data) {
 
 function script(src) {
     return new Promise((resolve, reject) => {
+        console.log(`lets make ${src}`)
         let script = document.createElement("script")
         script.src = src
         document.head.appendChild(script)
