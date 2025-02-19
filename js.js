@@ -1,4 +1,5 @@
 console.log("Hello fellow nerd!")
+let gdata
 
 /* This code would hard reload the page on an error :skull: it was a nightmare
 window.onerror = () => {
@@ -38,7 +39,8 @@ fetch("javascript.json")
             if(d.name.toLowerCase() === p.toLowerCase()) id = i
             i++
         })
-        page(data[id])
+        gdata = data[id]
+        page(gdata)
     })
 
 async function page(data) {
@@ -102,10 +104,10 @@ async function page(data) {
     } */
     //Load Scripts
     if(data.p5) {
-        await script("https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.2/p5.min.js")
+        await script("https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js")
     }
     if(data.p5Sound) {
-        await script("https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.2/addons/p5.sound.min.js")
+        await script("https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.min.js")
     }
     for (let s of data.scripts) {
         if(!s.includes("/")) s = s+"@main/script.js"
