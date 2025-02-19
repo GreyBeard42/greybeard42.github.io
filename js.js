@@ -44,6 +44,13 @@ fetch("javascript.json")
 async function page(data) {
     //Load HTML additions
     if(data.HTML) document.body.innerHTML += data.HTML
+    //Load inputs/options
+    let options = document.createElement("a")
+    options.innerHTML = data.options
+    if(data.options) {
+        document.getElementById("date").before(options)
+        if(data.name !== "Frogger") info.innerHTML += " <b>|</b>"
+    }
     //Change box name
     if(!data.box) {
         data.box = "canvas"
@@ -53,19 +60,13 @@ async function page(data) {
         box.id = data.box
         document.body.appendChild(box)
     }
+    /* 
     //Overflow
     if(data.overflow === "shown") document.body.style = "overflow-y: scroll;"
     //Upercase text for Frogger
     if(data.name === "Frogger") {
         back.innerText = 'BACK'
         info.innerText = "INFO"
-    }
-    //Load inputs/options
-    let options = document.createElement("a")
-    options.innerHTML = data.options
-    if(data.options) {
-        document.getElementById("date").before(options)
-        if(data.name !== "Frogger") info.innerHTML += " <b>|</b>"
     }
     //Load style
     if(data.style) {
@@ -98,7 +99,7 @@ async function page(data) {
         )
         document.fonts.add(fontFile)
         document.body.style.fontFamily = "Custom Font, Beardy, sans-serif"
-    }
+    } */
     //Load Scripts
     if(data.p5) {
         await script("https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.2/p5.min.js")
@@ -110,14 +111,15 @@ async function page(data) {
         if(!s.includes("/")) s = s+"@main/script.js"
         if(!s.includes("https://")) s = `https://cdn.jsdelivr.net/gh/GreyBeard42/${s}`
         await script(s)
+        console.log(setup)
     }
     //Set page title
-    document.title = data.name+" - GreyBeard42's Homepage"
+    /* document.title = data.name+" - GreyBeard42's Homepage"
     date.innerText = data.date
     //make info tab
     console.log("ended page build")
     makeInfo(data)
-    infoToggle()
+    infoToggle() */
 }
 
 function script(src) {
