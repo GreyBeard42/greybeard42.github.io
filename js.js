@@ -127,7 +127,7 @@ function script(src) {
         console.log(`lets make ${src}`)
         let script = document.createElement("script")
         script.src = src
-        document.head.appendChild(script)
+        document.body.appendChild(script)
         script.onload = () => {
             console.log(`Script ${src} loaded`)
             resolve(`Script ${src} loaded`)
