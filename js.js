@@ -104,7 +104,7 @@ async function page(data) {
     } */
     //Load Scripts
     if(data.p5) {
-        await script("https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js")
+        await script("https://cdn.jsdelivr.net/npm/p5@1.11.3/lib/p5.min.js")
     }
     if(data.p5Sound) {
         await script("https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.min.js")
