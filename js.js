@@ -169,10 +169,9 @@ function makeInfo(data) {
         })
         .then(() => {
             fetch(`https://api.github.com/repos/greybeard42/${data.repo}/commits/main`)
-                .then(file => {
-                    if(file.ok) {
-                        let data = file.json()
-
+                .then(file => file.json())
+                .then(data => {
+                    if(data) {
                         let commit = document.createElement('a')
                         commit.innerText = "Latest Commit:"
                         commit.style = "display: block; margin-top: 1.5em;"
