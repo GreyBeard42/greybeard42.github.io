@@ -43,7 +43,7 @@ fetch("javascript.json")
         page(gdata)
     })
 
-function page(data) {
+async function page(data) {
     //Load HTML additions
     if(data.HTML) document.body.innerHTML += data.HTML
     //Load inputs/options
@@ -62,7 +62,6 @@ function page(data) {
         box.id = data.box
         document.body.appendChild(box)
     }
-    /* 
     //Overflow
     if(data.overflow === "shown") document.body.style = "overflow-y: scroll;"
     //Upercase text for Frogger
@@ -101,7 +100,7 @@ function page(data) {
         )
         document.fonts.add(fontFile)
         document.body.style.fontFamily = "Custom Font, Beardy, sans-serif"
-    } */
+    }
     //Load Scripts
     if(data.p5) {
         await script("https://cdn.jsdelivr.net/npm/p5@1.11.3/lib/p5.js")
@@ -116,12 +115,12 @@ function page(data) {
         console.log(setup)
     }
     //Set page title
-    /* document.title = data.name+" - GreyBeard42's Homepage"
+    document.title = data.name+" - GreyBeard42's Homepage"
     date.innerText = data.date
+
     //make info tab
     console.log("ended page build")
     makeInfo(data)
-    infoToggle() */
 }
 
 function script(src) {
