@@ -1,25 +1,6 @@
 console.log("Hello fellow nerd!")
 let gdata
 
-/* This code would hard reload the page on an error :skull: it was a nightmare
-window.onerror = () => {
-    const url = new URL(window.location.href);
-    if(!url.searchParams.has("reload")) {
-        let error = document.createElement("p")
-        error.innerText = "An error has occured,\nCtrl + Shift + R!"
-        document.body.appendChild(error)
-        location.replace(location.href + "&reload=" + new Date().getTime())
-    }
-}
-
-window.addEventListener("load", function () {
-    const url = new URL(window.location.href);
-    if (url.searchParams.has("reload")) {
-        url.searchParams.delete("reload")
-        window.history.replaceState(null, "", url.pathname + url.search)
-    }
-}) */
-
 fetch("javascript.json")
     .then(file => file.json())
     .then(data => {
@@ -175,7 +156,6 @@ function makeInfo(data) {
             let readme = document.createElement('div')
             readme.classList.add("readme")
 
-            if(!data.repo.includes("@")) data.repo += "@main"
             let renderer = new marked.Renderer()
             renderer.image = (href, title, text) => {
                 const correctedHref = typeof href === 'string'
