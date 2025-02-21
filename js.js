@@ -101,9 +101,11 @@ async function page(data) {//Load HTML additions
         console.log("done loading script");
     }
 
-    if(typeof setup !== "undefined") window.setup = setup
-    if(typeof draw !== "undefined") window.draw  = draw
-    new p5()
+    if(typeof p5 !== "undefined") {
+        if(typeof setup !== "undefined") window.setup = setup
+        if(typeof draw !== "undefined") window.draw  = draw
+        new p5()
+    }
 
     //Set page title
     document.title = data.name+" - GreyBeard42's Homepage"
