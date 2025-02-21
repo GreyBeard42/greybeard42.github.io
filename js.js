@@ -43,7 +43,7 @@ fetch("javascript.json")
         page(gdata)
     })
 
-async function page(data) {
+function page(data) {
     //Load HTML additions
     if(data.HTML) document.body.innerHTML += data.HTML
     //Load inputs/options
