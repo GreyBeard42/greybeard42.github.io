@@ -1,12 +1,12 @@
 async function loadScripts() {
     if (true) {
         console.log("loading p5")
-        await script("https://cdn.jsdelivr.net/npm/p5@1.11.3/lib/p5.js");
+        await script("https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js");
         console.log("done loading p5");
     }
     if (true) {
         console.log("loading p5 sound");
-        await script("https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.js");
+        await script("https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.min.js");
         console.log("done loading p5 sound");
     }
     
