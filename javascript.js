@@ -7,8 +7,7 @@ fetch("javascript.json")
     for(let i=0; i<links.length; i++) {
       let abox = document.createElement('a')
       abox.href = 'javascript/'+links[i].link
-      //REMOVE .html!!!
-      if(!links[i].link) abox.href = "js.html?p="+encodeURIComponent(links[i].name)
+      if(!links[i].link) abox.href = "js?p="+encodeURIComponent(links[i].name)
       else abox.href = "oldjavascript/"+links[i].link+"/index.html"
       abox.alt = links[i].name
       let divBox = document.createElement('div')

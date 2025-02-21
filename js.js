@@ -58,19 +58,24 @@ async function page(data) {//Load HTML additions
     }
     if(data.bigcanvas) {
         document.getElementById(data.box).classList.add("bigcanvas")
-        document.getElementById("back").style = "color: white;"
-        document.getElementById("info").style = "color: white;"
-        document.getElementById("date").style = "float: right; color: white; margin: 0;"
-        options.style = "color: white;"
-        document.getElementById("top").style = "background-color: rgba(100, 100, 100, 0.15);"
+        if(!data.topSolid) {
+            document.getElementById("back").style = "color: white;"
+            document.getElementById("info").style = "color: white;"
+            document.getElementById("date").style = "float: right; color: white; margin: 0;"
+            options.style = "color: white;"
+            document.getElementById("top").style = "background-color: rgba(100, 100, 100, 0.15);"
+        }
     }
+    if(data.topSolid) document.getElementById("top").style = "background-color: rgba(4, 48, 34, 0.8);"
     if(data.background) {
         document.body.style.background = data.background
-        document.getElementById("back").style = "color: white;"
-        document.getElementById("info").style = "color: white;"
-        document.getElementById("date").style = "float: right; color: white; margin: 0;"
-        options.style = "color: white;"
-        document.getElementById("top").style = "background-color: rgba(100, 100, 100, 0.15);"
+        if(!data.topSolid) {
+            document.getElementById("back").style = "color: white;"
+            document.getElementById("info").style = "color: white;"
+            document.getElementById("date").style = "float: right; color: white; margin: 0;"
+            options.style = "color: white;"
+            document.getElementById("top").style = "background-color: rgba(100, 100, 100, 0.15);"
+        }
     }
     //Load custom fonts
     if(data.font) {

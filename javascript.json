@@ -1,4 +1,16 @@
-[
+    [{  
+        "name": "Free Ski",
+        "repo": "ski",
+        "date": "February 20th, 2025",
+        "scripts": ["ski@homepage/script.js"],
+        "p5": "true",
+        "p5Sound": "true",
+        "bigcanvas": "true",
+        "background": "black",
+        "topSolid": "true",
+        "style": "https://cdn.jsdelivr.net/gh/GreyBeard42/ski@main/style.css",
+        "HTML": "<div id=startbox><p>Use arrow keys</p><p>or click sides of</p><p>the screen to turn</p><button id=start>Start</button></div>"
+    },
     {  
         "name": "Conway's Game of Life",
         "repo": "conway",
