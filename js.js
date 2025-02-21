@@ -43,8 +43,7 @@ fetch("javascript.json")
         page(gdata)
     })
 
-async function page(data) {
-    //Load HTML additions
+async function page(data) {//Load HTML additions
     if(data.HTML) document.body.innerHTML += data.HTML
     //Load inputs/options
     let options = document.createElement("a")
@@ -101,13 +100,27 @@ async function page(data) {
         document.fonts.add(fontFile)
         document.body.style.fontFamily = "Custom Font, Beardy, sans-serif"
     }
-    //Load Scripts
-    if(data.p5) {
-        await script("https://cdn.jsdelivr.net/npm/p5@1.11.3/lib/p5.js")
+
+    //loadScripts
+    if (true) {
+        console.log("loading p5")
+        await script("https://cdn.jsdelivr.net/npm/p5@1.11.3/lib/p5.js");
+        console.log("done loading p5");
     }
-    if(data.p5Sound) {
-        await script("https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.js")
+    if (true) {
+        console.log("loading p5 sound");
+        await script("https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.js");
+        console.log("done loading p5 sound");
     }
+    
+    for (let s of data.scripts) {
+        if (!s.includes("/")) s = s + "@main/script.js";
+        if (!s.includes("https://")) s = `https://cdn.jsdelivr.net/gh/GreyBeard42/${s}`;
+        console.log("loading script");
+        await script(s);
+        console.log("done loading script");
+    }
+
     for (let s of data.scripts) {
         if(!s.includes("/")) s = s+"@main/script.js"
         if(!s.includes("https://")) s = `https://cdn.jsdelivr.net/gh/GreyBeard42/${s}`
