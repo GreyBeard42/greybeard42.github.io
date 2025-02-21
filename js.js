@@ -158,11 +158,13 @@ function makeInfo(data) {
             let readme = document.createElement('div')
             readme.classList.add("readme")
 
+            let repo = data.repo
+            if(!repo.includes("@")) repo += "@main"
             let renderer = new marked.Renderer()
             renderer.image = (href, title, text) => {
                 const correctedHref = typeof href === 'string'
                     ? href
-                    : `https://cdn.jsdelivr.net/gh/GreyBeard42/${data.repo}/` + href.href
+                    : `https://cdn.jsdelivr.net/gh/GreyBeard42/${repo}/` + href.href
                 
                 return `<img src="${correctedHref}" alt="${text}" title="${title || ''}" style="max-width:100%;">`
             }
