@@ -102,23 +102,27 @@ async function page(data) {//Load HTML additions
     }
 
     //loadScripts
-    if (true) {
+    if(data.p5) {
         console.log("loading p5")
         await script("https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js");
         console.log("done loading p5");
     }
-    if (true) {
+    if(data.p5Sound) {
         console.log("loading p5 sound");
         await script("https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.min.js");
         console.log("done loading p5 sound");
     }
-    for (let s of data.scripts) {
+    for(let s of data.scripts) {
         if (!s.includes("/")) s = s + "@main/script.js";
         if (!s.includes("https://")) s = `https://cdn.jsdelivr.net/gh/GreyBeard42/${s}`;
         console.log("loading script");
         await script(s);
         console.log("done loading script");
     }
+
+    if(setup) window.setup = setup
+    if(draw) window.draw  = draw
+    new p5()
 
     //Set page title
     document.title = data.name+" - GreyBeard42's Homepage"
