@@ -167,10 +167,16 @@ function makeInfo(data) {
             if(!repo.includes("@")) repo += "@main"
             let renderer = new marked.Renderer()
             renderer.image = (href, title, text) => {
-                const correctedHref = typeof href === 'string'
-                    ? href
-                    : `https://cdn.jsdelivr.net/gh/GreyBeard42/${repo}/` + href.href
-                
+                let correctedHref
+                if(!href.href.includes("https://")) {
+                    correctedHref = typeof href === 'string'
+                        ? href
+                        : `https://cdn.jsdelivr.net/gh/GreyBeard42/${repo}/` + href.href
+                } else {
+                    correctedHref = typeof href === 'string'
+                        ? href
+                        : href.href
+                }
                 return `<img src="${correctedHref}" alt="${text}" title="${title || ''}" style="max-width:100%;">`
             }
             readme.innerHTML = marked.parse(text, { renderer })
