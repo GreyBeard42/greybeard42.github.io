@@ -2,7 +2,7 @@
         "name": "Free Ski",
         "repo": "ski",
         "date": "February 20th, 2025",
-        "scripts": ["ski@homepage/script.js"],
+        "scripts": ["ski"],
         "p5": "true",
         "p5Sound": "true",
         "bigcanvas": "true",
