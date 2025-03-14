@@ -23,10 +23,6 @@ fetch("photos.json")
       })
       content.appendChild(txt)
     })
-    let info = document.createElement('p')
-    info.innerText = '*Will not auto scroll until image is loaded'
-    info.style = "margin: 0.25%;"
-    content.appendChild(info)
 
     let column1 = document.createElement('div')
     column1.classList.add('column')

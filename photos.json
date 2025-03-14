@@ -1,9 +1,12 @@
 {
     "photos": [
-        {"src": "8feb25/DSC_0315.JPG", "alt": "A blue house with a cold tree."},
+        {"src": "marchzoo/DSC_0747.JPG", "alt": "A close up on two giraffes"},
+        {"src": "marchzoo/DSC_0757.JPG", "alt": "A giraffe sitting"},
+        {"src": "marchzoo/CSC_0809.JPG", "alt": "A close up on a giraffe"},
+        {"src": "marchzoo/CSC_0629.JPG", "alt": "Flamingos"},
+        {"src": "marchzoo/CSC_0666.JPG", "alt": "A rabbit"},
+
         {"src": "8feb25/CSC_0481.JPG", "alt": "A magnolia tree."},
-        {"src": "8feb25/DSC_0478.JPG", "alt": "A bright house hidden by a lush tree."},
-        {"src": "8feb25/DSC_0312.JPG", "alt": "A cold city tree in the morning."},
         {"src": "8feb25/CSC_0457.JPG", "alt": "The edge of a sidewalk with the word Fransico etched into the cement."},
         {"src": "8feb25/CSC_0416.JPG", "alt": "A no skateboards sign."},
 
@@ -95,7 +98,6 @@
         { "src": "DSC_0695.JPG", "alt": "A rapidly flowing river next to mossy rocks." }
     ],
     "links": [
-        {"name": "Downtown San Fransico", "link": "8feb25/CSC_0325.JPG"},
         { "name": "Natural Bridges Beach", "link": "nov24/DSC_0790.JPG" },
         { "name": "Pier 1 - SF", "link": "31aug24/CSC_0181.JPG" },
         { "name": "Cargo Ships", "link": "31aug24/DSC_0029.JPG" },
