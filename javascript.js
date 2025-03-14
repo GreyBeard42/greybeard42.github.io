@@ -5,6 +5,7 @@ fetch("javascript.json")
   .then(data => links = data)
   .then(() => {
     for(let i=0; i<links.length; i++) {
+      if(links[i].hidden) continue;
       let abox = document.createElement('a')
       abox.href = 'javascript/'+links[i].link
       if(!links[i].link) abox.href = "js?p="+encodeURIComponent(links[i].name)

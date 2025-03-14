@@ -24,7 +24,8 @@ fetch("javascript.json")
         page(gdata)
     })
 
-async function page(data) {//Load HTML additions
+async function page(data) {
+    //Load HTML additions
     if(data.HTML) document.body.innerHTML += data.HTML
     //Load inputs/options
     let options = document.createElement("a")
@@ -49,6 +50,7 @@ async function page(data) {//Load HTML additions
         back.innerText = 'BACK'
         info.innerText = "INFO"
     }
+    if(!data.textcolor) data.textcolor = "white"
     //Load style
     if(data.style) {
         let style = document.createElement("link")
@@ -59,32 +61,36 @@ async function page(data) {//Load HTML additions
     if(data.bigcanvas) {
         document.getElementById(data.box).classList.add("bigcanvas")
         if(!data.topSolid) {
-            document.getElementById("back").style = "color: white;"
-            document.getElementById("info").style = "color: white;"
-            document.getElementById("date").style = "float: right; color: white; margin: 0;"
-            options.style = "color: white;"
-            document.getElementById("top").style = "background-color: rgba(100, 100, 100, 0.15);"
+            document.getElementById("back").style = `color: ${data.textcolor};`
+            document.getElementById("info").style = `color: ${data.textcolor};`
+            document.getElementById("date").style = `float: right; color: ${data.textcolor}; margin: 0;`
+            options.style = `color: ${data.textcolor};`
+            //document.getElementById("top").style = "background-color: rgba(100, 100, 100, 0.15);"
         }
     }
     if(data.topSolid) document.getElementById("top").style = "background-color: rgba(4, 48, 34, 0.8);"
+    else document.getElementById("top").style = ""
     if(data.background) {
         document.body.style.background = data.background
         if(!data.topSolid) {
-            document.getElementById("back").style = "color: white;"
-            document.getElementById("info").style = "color: white;"
-            document.getElementById("date").style = "float: right; color: white; margin: 0;"
-            options.style = "color: white;"
-            document.getElementById("top").style = "background-color: rgba(100, 100, 100, 0.15);"
+            document.getElementById("back").style = `color: ${data.textcolor};`
+            document.getElementById("info").style = `color: ${data.textcolor};`
+            document.getElementById("date").style = `float: right; color: ${data.textcolor}; margin: 0;`
+            options.style = `color: ${data.textcolor};`
+            //document.getElementById("top").style = "background-color: rgba(100, 100, 100, 0.15);"
         }
     }
     //Load custom fonts
     if(data.font) {
-        let fontFile = new FontFace(
-            "Custom Font",
-            `url(${data.font})`
-        )
-        document.fonts.add(fontFile)
-        document.body.style.fontFamily = "Custom Font, Beardy, sans-serif"
+        if(data.font.includes("https://")) {
+            let fontFile = new FontFace(
+                "Custom Font",
+                `url(${data.font})`
+            )
+            document.fonts.add(fontFile)
+            document.body.style.fontFamily = "Custom Font, Beardy, sans-serif"
+        } else document.body.style.fontFamily = data.font
+        
     }
 
     //loadScripts

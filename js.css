@@ -13,7 +13,7 @@ body {
 }
 
 #top {
-    background-color: rgba(60, 100, 60, 0.15);
+    background-color: rgba(100, 100, 60, 0.15);
     color: #9adbc6;
     padding: 8px;
     width: calc(100vw - 52px);
