@@ -10,13 +10,13 @@
         "HTML": "<h1>Circles</h1><label for=solvefor>Solve For: </label><select id=solvefor><option>area</option><option>circumference</option><option>diameter</option><option>radius</option></select><div id=inputs></div><br><button id=calc>Calculate</button><div id=outputbox></div>"
     },
     {  
-        "name": "Cellular Automana",
-        "repo": "cellularautomana",
+        "name": "Cellular Automata",
+        "repo": "cellularautomata",
         "date": "March 8th, 2025",
-        "scripts": ["cellularautomana"],
+        "scripts": ["cellularautomata"],
         "bigcanvas": "true",
         "background": "black",
-        "style": "https://cdn.jsdelivr.net/gh/GreyBeard42/cellularautomana@main/style.css",
+        "style": "https://cdn.jsdelivr.net/gh/GreyBeard42/cellularautomata@main/style.css",
         "options": "<button onclick=reset()>Restart</button> Rule: <input id=userrule type=number value=110> Speed: <input id=speed type=number value=40>",
         "textcolor": "black",
         "font": "monospace",
