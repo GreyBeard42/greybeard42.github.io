@@ -143,7 +143,7 @@
         "scripts": ["csstester"],
         "style": "https://cdn.jsdelivr.net/gh/GreyBeard42/cssTester@main/style.css"
     },
-    {"note": "REMOVE ME & PUT ON PRIVATE REPO", "name": "Neural Network Pong", "link": "aipong"},
+    {"hidden": true, "name": "Neural Network Pong", "link": "aipong"},
     {
         "name": "Clearance",
         "repo": "clearance",
