@@ -9,7 +9,10 @@ fetch("javascript.json")
       let abox = document.createElement('a')
       abox.href = 'javascript/'+links[i].link
       if(!links[i].link) abox.href = "js?p="+encodeURIComponent(links[i].name)
-      else abox.href = "oldjavascript/"+links[i].link+"/index.html"
+      else {
+        if(links[i].link.includes("/")) abox.href = links[i].link
+        else abox.href = "oldjavascript/"+links[i].link+"/index.html"
+      }
       abox.alt = links[i].name
       let divBox = document.createElement('div')
       divBox.classList.add('jsBox')
@@ -20,7 +23,10 @@ fetch("javascript.json")
       txt.style = 'text-decoration: underline;'
       let img = document.createElement('img')
       if(links[i].repo) img.src = 'https://cdn.jsdelivr.net/gh/GreyBeard42/'+links[i].repo+'@main/preview.png'
-      else img.src = "oldjavascript/"+links[i].link+"/preview.png"
+      else {
+        if(links[i].preview) img.src = links[i].preview
+        else img.src = "oldjavascript/"+links[i].link+"/preview.png"
+      }
       img.alt = 'preview'
       
       divBox.appendChild(txt)

@@ -187,5 +187,11 @@
     },
     {"name": "Encrypt", "link": "encrypt"},
     {"name": "Performance", "link": "performance"},
-    {"name": "Graph", "link": "graph"}
+    {"name": "Graph", "link": "graph"},
+    {
+        "name": "Corn Country",
+        "date": "Late 2023",
+        "link": "corncountry/game",
+        "preview": "corncountry/preview.png"
+    }
 ]
