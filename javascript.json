@@ -1,5 +1,13 @@
 [
     { 
+        "name": "Minesweeper",
+        "repo": "minesweeper",
+        "date": "April 26th, 2025",
+        "scripts": ["minesweeper"],
+        "style": "https://cdn.jsdelivr.net/gh/GreyBeard42/minesweeper@main/style.css",
+        "box": "game"
+    },
+    { 
         "hidden": "true",
         "name": "Circles",
         "repo": "circles",
