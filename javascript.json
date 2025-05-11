@@ -5,7 +5,8 @@
         "date": "May 11th, 2025",
         "scripts": ["binaryimage"],
         "style": "https://cdn.jsdelivr.net/gh/GreyBeard42/binaryimage@main/style.css",
-        "HTML": "<div id='fileouter'></div><div id='content'><div id='canvas'></div><div><textarea id='text' placeholder='Type here...'></textarea><button onclick='download()'>Download!</button></div></div>"
+        "HTML": "<div id='fileouter'></div><div id='content'><div id='canvas'></div><div><textarea id='text' placeholder='Type here...'></textarea><button onclick='download()'>Download!</button></div></div>",
+        "p5": "true"
     },
     { 
         "name": "Minesweeper",
