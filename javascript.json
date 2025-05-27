@@ -1,5 +1,15 @@
 [
     { 
+        "name": "Chess",
+        "repo": "chess",
+        "date": "May 25th, 2025",
+        "scripts": ["chess"],
+        "style": "https://cdn.jsdelivr.net/gh/GreyBeard42/chess@main/style.css",
+        "HTML": "<div id='copied' style='display: none;'>Link Copied!</div>",
+        "options": "<button onclick='resetGame()'>Reset</button>",
+        "box": "content"
+    },
+    { 
         "name": "Binary Image",
         "repo": "binaryimage",
         "date": "May 11th, 2025",
