@@ -8,6 +8,7 @@ fetch("javascript.json")
       if(links[i].hidden) continue;
       let abox = document.createElement('a')
       abox.href = 'javascript/'+links[i].link
+      abox.addEventListener("click", () => {umami.track('jsgame', {game: links[i].name})})
       if(!links[i].link) abox.href = "js?p="+encodeURIComponent(links[i].name)
       else {
         if(links[i].link.includes("/")) abox.href = links[i].link
