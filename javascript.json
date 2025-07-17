@@ -1,5 +1,16 @@
 [
     { 
+        "name": "Corn Country 2",
+        "repo": "corncountry2",
+        "date": "July 16th, 2025",
+        "scripts": ["corncountry2"],
+        "style": "https://cdn.jsdelivr.net/gh/GreyBeard42/corncountry2@main/style.css",
+        "HTML": "<div id=bottom><a>Corn Country <sup>2</sup></a><a><span id=score>0</span> corn</a><!--<a id=outercps style=display: none><span id=cps>0</span> per second</a>--><a onclick='game.openedgithub = true' target=_blank href=https://github.com/GreyBeard42/corncountry2 style=color: inherit;>View on Github</a><a onclick='game.openedoldgame = true' target=_blank href=https://greybeard42.github.io/corncountry/game style='color: inherit; border: none;'>Play the Original</a><div style='float: right; margin-right: 15px;'><button id=openSettings>Settings</button><button id=openAchieves>View Achievements</button><button id=openStore>Open Store</button></div></div><div id='store' style='display: none;'><h1>Store</h1><h1 id='closeStore' style='float: right;'>X</h1><br><div id='storeinner'></div></div><div id='achievements' style='display: none;'><h1>Achievements</h1><h1 onclick='document.getElementById(&#39;achievements&#39;).style = &#39;display: none;&#39;' style='float: right;'>X</h1><div id='achieveinner'></div></div><div id='achieveouter'></div><div id='settings' style='display: none;'><h1>Settings</h1><h1 onclick='document.getElementById(&#39;settings&#39;).style=&#39;display: none;&#39;' style='float: right;'>X</h1><div id='innerSettings'><button onclick='game.save()'>Save</button><button onclick='hardreset()'>Hard Reset</button></div></div><div id='loading'>Loading Save Data...</div>",
+        "box": "canvas",
+        "p5": "true",
+        "bigcanvas": "true"
+    },
+    { 
         "name": "Chess",
         "repo": "chess",
         "date": "May 25th, 2025",
