@@ -1,5 +1,12 @@
 [
     { 
+        "name": "Auto Jazz",
+        "repo": "autojazz",
+        "date": "July 27th, 2025",
+        "scripts": ["https://unpkg.com/tone@latest/build/Tone.js", "autojazz"],
+        "HTML": "<h1>Auto Jazz</h1><p>Generated Chord Progession:</p><p id=output>Failed to load</p><button id=play>Play</button>"
+    },
+    { 
         "name": "Corn Country 2",
         "repo": "corncountry2",
         "date": "July 16th, 2025",
