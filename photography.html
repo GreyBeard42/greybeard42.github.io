@@ -11,29 +11,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset='utf-8'/>
     <style>
-      * {
-        box-sizing: border-box;
-      }
-      
-      .row {
-        display: -ms-flexbox;
+      .images div {
         display: flex;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        padding: 0 4px;
-      }
-      
-      .column {
-        -ms-flex: 50%;
-        flex: 50%;
-        padding: 0 0.5%;
-      }
-      
-      .column img {
         width: 100%;
-        margin-top: 2%;
-        vertical-align: middle;
-        border: solid #9adbc6 0.25vw;
+        align-items: flex-start;
+      }
+      .column {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 6px;
+        gap: 6px;
+      }
+      .images img {
+        image-rendering: -webkit-optimize-contrast;
+        width: 100%;
+        border: solid 2px;
+      }
+      hr {
+        border: none;
+        background: #97f7c7;
+        height: 4px;
+        width: 95%;
+        margin-top: 2vh;
+      }
+      h2 {
+        font-size: 3vw;
+        margin: 15px 0;
+      }
+
+      #big {
+        z-index: 10;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #1a1a1a9f;
+      }
+      #bigimg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 90vw;
+        max-height: 90vh;
+        border: solid 4px;
+      }
+      #close {
+        width: 50px;
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        z-index: 15;
       }
     </style>
   </head>
@@ -50,8 +80,11 @@
     
     <!--TITLE-->
     <h1 class="hometitle">PHOTOGRAPHY</h1>
+    <p>Click image to view enlargened</p>
     
     <div class="content" id='content'></div>
+
+    <div id="big" style="display: none;"><img id="close" src="images/close.png"><img id="bigimg" src="images/photography/aug24/CSC_0531-min.JPG"></div>
 
     <script src='photography.js'></script>
   </body>

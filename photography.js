@@ -1,60 +1,78 @@
 var content = document.getElementById('content')
 let photos, links
+let bigimgscale = 90
+
+function hidebig() {
+  document.body.style = "overflow-y: scroll;"
+  document.getElementById("big").style = "display: none;"
+  document.getElementById("close").removeEventListener("click", hidebig)
+}
+
+function bigscale(num) {
+  document.getElementById("bigimg").style.maxWidth = `${num}vw`
+  document.getElementById("bigimg").style.maxHeight = `${num}vh`
+}
+
+window.addEventListener('wheel', function(event) {
+  if(document.getElementById("big").style.cssText === "display: none;") return
+  if (event.deltaY < 0) {
+    bigimgscale *= 1.1
+  } else if (event.deltaY > 0) {
+    bigimgscale *= 0.9
+  }
+  bigimgscale = Math.max(50,bigimgscale)
+  bigimgscale = Math.min(800,bigimgscale)
+  bigscale(bigimgscale)
+});
 
 fetch("photos.json")
   .then(file => file.json())
   .then(data => {
-    photos = data.photos
-    links = data.links
-  })
-  .then(() => {
-    let linkTitle = document.createElement('p')
-    linkTitle.innerText = 'Jump to:'
-    linkTitle.style = 'margin: 0.25%;'
-    content.appendChild(linkTitle)
-    links.forEach((e) => {
-      let txt = document.createElement('a')
-      txt.innerText = e.name
-      txt.href = "#"+e.link
-      txt.style = 'color: inherit; margin: 0.25%; text-decoration: underline;'
-      txt.addEventListener("click", () => {
-        const target = txt.getAttribute('href').substring(1);
-        smoothScroll(target)
-      })
-      content.appendChild(txt)
-    })
+    let columns = Math.ceil(document.body.clientWidth/400)
+    let outer = document.createElement("div")
+    outer.classList.add("images")
 
-    let column1 = document.createElement('div')
-    column1.classList.add('column')
-    let column2 = document.createElement('div')
-    column2.classList.add('column')
-    let columns = []
-    columns.push(column1)
-    columns.push(column2)
+    data.photos.forEach((sect) => {
+      let section = document.createElement("div")
 
-    let i = 0
-    photos.forEach((e) => {
-      if(e.alt != '') {
-        let image = document.createElement('img')
-        image.src = 'images/photography/'+e.src
-        image.alt = e.alt
-        image.id = e.src
-        image.loading = 'lazy'
-        if(i%2==0) {
-          columns[0].appendChild(image)
-        } else {
-          columns[1].appendChild(image)
-        }
+      let title = document.createElement("h2")
+      title.innerText = sect.title
+      outer.appendChild(title)
+
+      let columnElements = []
+      for(let i = 0; i < columns; i++) {
+        let col = document.createElement("div")
+        col.classList.add("column")
+        columnElements.push(col)
+        section.appendChild(col)
       }
-      i++
+
+      sect.photos.forEach((e, i) => {
+        if(e.alt !== '') {
+          let image = document.createElement('img')
+          image.src = 'images/photography/' + e.src
+          image.alt = e.alt
+          image.id = e.src
+          image.loading = 'lazy'
+          image.addEventListener("click", () => {
+            bigimgscale = 90
+            bigscale(90)
+            document.body.style = "overflow-y: hidden;"
+            document.getElementById("big").style = "display: block;"
+            document.getElementById("bigimg").src = 'images/photography/'+e.src
+            document.getElementById("close").addEventListener("click", hidebig)
+          })
+
+          columnElements[i % columns].appendChild(image)
+        }
+      })
+
+      outer.appendChild(section)
+      let hr = document.createElement("hr")
+      outer.appendChild(hr)
     })
 
-    let row = document.createElement('div')
-    row.classList.add('row')
-    row.appendChild(columns[0])
-    row.appendChild(columns[1])
-
-    content.appendChild(row)
+    content.appendChild(outer)
   })
 
 function smoothScroll(t) {
