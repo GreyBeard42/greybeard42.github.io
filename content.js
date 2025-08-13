@@ -1,10 +1,6 @@
 console.log("Hello fellow nerd!")
 
-let license = document.createElement('p')
-license.innerHTML = '<a href="https://github.com/GreyBeard42/greybeard42.github.io/blob/main/LICENSE">View License</a> <br> Copyright (c) 2024 <a href="https://github.com/GreyBeard42">GreyBeard42</a>'
-license.classList.add('copyright')
-//document.body.appendChild(license)
-
+let isaprfools = (new Date().getMonth() == 3 && new Date().getDate() == 1)
 let isHalloween = (new Date().getMonth() == 9)
 let isThankg = (new Date().getMonth() == 10)
 let isChristmas = (new Date().getMonth() == 11)
@@ -40,7 +36,6 @@ if(isChristmas) {
     let back = document.createElement("img")
     back.src = "holiday/garland.png"
     back.style = "width: 5vw; height: 35vw; position: absolute; left: 1vw; top: 0; z-index: -5;"
-
 }
 icon.classList.add("open")
 if(location.href.split("/").slice(-1) == "photography.html") icon.style.bottom = "6vh"
@@ -56,3 +51,10 @@ icon.addEventListener("click", () => {
     }
 })
 document.body.appendChild(icon)
+
+if (isaprfools) {
+    let style = document.createElement("link")
+    style.rel = "stylesheet"
+    style.href = "aprfools.css"
+    document.head.appendChild(style)
+}

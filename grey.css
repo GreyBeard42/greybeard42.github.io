@@ -1,3 +1,13 @@
+:root {
+  --background: #043022;
+  --background2: #063627;
+  --text: #9adbc6;
+  --link: #c6f5e6;
+  --topnavbg: #97f7c7;
+  --topnavtxt: #2b7f54;
+  --placeholder: #78bfa8;
+}
+
 /* ALL */
 @font-face {
   font-family: "Beardy";
@@ -6,24 +16,25 @@
 }
 body {
   text-align: center;
-  color: #9adbc6;
-  background-color: #043022;
+  color: var(--text);
+  background-color: var(--background);
   font-family: "Beardy", sans-serif;
   image-rendering: pixelated;
   overflow-x: hidden;
 }
 img {user-select: none;}
-a {color: #9adbc6;}
+a {color: var(--text);}
 
 .topnav {
   width: 98.5%;
   padding: 0.1%;
   position: fixed;
-  background-color: #97f7c7;
+  background-color: var(--topnavbg);
   overflow: hidden;
+  z-index: 10;
 }
 .topnav a {
-  color: #2b7f54;
+  color: var(--topnavtxt);
   float: left;
   padding: 0.8%;
   text-decoration: none;
@@ -33,16 +44,8 @@ a {color: #9adbc6;}
   height: 5vh;
 }
 .titleLink {
-  color: #c6f5e6;
+  color: var(--link);
   background-color: transparent;
-}
-.copyright {
-  text-align: left;
-  position: fixed;
-  bottom: 0;
-  padding: 1vh;
-  background: #043022;
-  margin: 1vh 0;
 }
 
 /* HOME */
@@ -51,10 +54,10 @@ a {color: #9adbc6;}
   margin-top: 5%;
   font-size: 8vw;
   font-weight: 500;
-  color: #c6f5e6;
+  color: var(--link);
 }
 .homeBox {
-  border: solid #9adbc6 0.5vw;
+  border: solid var(--text) 0.5vw;
   margin: 3vw 20vw;
   padding: 1%;
 }
@@ -65,7 +68,7 @@ a {color: #9adbc6;}
 }
 .homepic {
   width: 75%;
-  border: solid #9adbc6 0.6vw;
+  border: solid var(--text) 0.6vw;
 }
 .homeLink {
   height: 25%;
@@ -73,7 +76,7 @@ a {color: #9adbc6;}
 
 /* ART */
 .art {
-  border: solid #9adbc6 0.5vw;
+  border: solid var(--text) 0.5vw;
 }
 
 /* Javascript */
@@ -84,15 +87,15 @@ a {color: #9adbc6;}
 }
 .js {
   margin-bottom: 3%;
-  color: #9adbc6;
+  color: var(--text);
   text-decoration: underline;
 }
 .jsBox {
-  background: #043022;
+  background: var(--background);
   overflow: hidden;
   font-size: 200%;
   margin: 2% 2%;
-  border: solid #9adbc6 0.3vw;
+  border: solid var(--text) 0.3vw;
   padding: 1.5% 1%;
 }
 .jsBox img {
@@ -108,16 +111,16 @@ a {color: #9adbc6;}
 /* Blog */
 #paper {
   image-rendering: auto;
-  border: #9adbc6 solid 0.4vw;
+  border: var(--text) solid 0.4vw;
   padding: 1vw;
   margin: 13vh 2vw;
-  background:#043828;
+  background: var(--background);
 }
 .blogHeader {overflow: hidden;}
 .blogHeader a {
   font-size: 4vw;
   font-weight: 500;
-  color: #c6f5e6;
+  color: var(--link);
 }
 #columns {
   display: flex;
@@ -210,11 +213,11 @@ a {color: #9adbc6;}
 
 /*special*/
 .egg {
-  background: #9adbc6;
+  background: var(--text);
   position: fixed;
   top: 2vh;
   left: 2vw;
-  border: #9adbc6 solid 0.5vw;
+  border: var(--text) solid 0.5vw;
 }
 .open {
   width: 10vw;

@@ -1,0 +1,13 @@
+:root {
+  --background: #fbcfdd;
+  --background2: #f9c9d8;
+  --text: #652439;
+  --link: #390a19;
+  --topnavbg: #680838;
+  --topnavtxt: #d480ab;
+  --placeholder: #874057;
+}
+
+img {
+    filter: invert(1);
+}

@@ -1,3 +1,13 @@
+:root {
+  --background: #043022;
+  --background2: #063627;
+  --text: #9adbc6;
+  --link: #c6f5e6;
+  --topnavbg: #97f7c7;
+  --topnavtxt: #2b7f54;
+  --placeholder: #78bfa8;
+}
+
 @font-face {
     font-family: "Beardy";
     src: url("homepage.woff2") format("woff2"),
@@ -5,8 +15,8 @@
 }
 body {
     user-select: none;
-    color: #9adbc6;
-    background-color: #043022;
+    color: var(--text);
+    background-color: var(--background);
     font-family: "Beardy", sans-serif;
     overflow: hidden;
     padding: 4px 8px;
@@ -14,7 +24,7 @@ body {
 
 #top {
     background-color: rgba(100, 100, 60, 0.15);
-    color: #9adbc6;
+    color: var(--text);
     padding: 8px;
     width: calc(100vw - 52px);
 }
@@ -24,12 +34,12 @@ a {
     margin-bottom: 0.75%;
 }
 #infobox {
-    color: #9adbc6;
+    color: var(--text);
     position: fixed;
     top: 0;
     right: 0;
-    background-color: #063627;
-    border-left:#97f7c7 solid 5px;
+    background-color: var(--background2);
+    border-left: var(--topnavbg) solid 5px;
     padding: 0 20px;
     width: 30vw;
     max-width: 400px;
@@ -44,11 +54,11 @@ a {
     background-color: #043022;
     padding: 12px;
     text-align: left;
-    border:#78bfa8 solid 3px;
+    border: var(--placeholder) solid 3px;
     margin-top: 5px;
 }
 .readme p {text-align: left;}
-hr{border-color:#97f7c7;}
+hr{border-color: var(--topnavbg);}
 
 .bigcanvas {
     position: absolute;
@@ -63,32 +73,32 @@ hr{border-color:#97f7c7;}
 img {user-select: none;}
 button {
     user-select: none;
-    background-color: #063627;
-    color: #9adbc6;
-    border: 1px #9adbc6 solid;
+    background-color: var(--background2);
+    color: var(--text);
+    border: 1px var(--text) solid;
     padding: 0.2%;
     font-family: "Beardy", sans-serif;
 }
 textarea {
-    background-color: #063627;
-    color: #9adbc6;
-    border: 1px #9adbc6 solid;
+    background-color: var(--background2);
+    color: var(--text);
+    border: 1px var(--text) solid;
     font-family: "Beardy", sans-serif;
 }
 textarea::placeholder {
-    color: #78bfa8;
+    color: var(--placeholder);
 }
 input {
-    background-color: #063627;
-    color: #9adbc6;
-    border: 1px #9adbc6 solid;
+    background-color: var(--background2);
+    color: var(--text);
+    border: 1px var(--text) solid;
     font-family: "Beardy", sans-serif;
 }
 input::placeholder {
-    color: #78bfa8;
+    color: var(--placeholder);
 }
 select {
-    background: #063627;
+    background: var(--background2);
     color: inherit;
     border-color: inherit;
     margin: 0 3px;

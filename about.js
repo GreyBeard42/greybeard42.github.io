@@ -11,8 +11,8 @@ async function getLatestCommit() {
         document.getElementById("commit").innerHTML = `<a href=\"${data.html_url}\">${data.commit.message}</a> by ${data.commit.author.name} on ${date[Symbol.toPrimitive]('string')}`
     } catch (error) {
         document.getElementById("commit").innerHTML = "Error fetching commit"
-        console.error("Error fetching commit:", error);
+        console.error("Error fetching commit:", error)
     }
 }
 
-getLatestCommit();
+getLatestCommit()
