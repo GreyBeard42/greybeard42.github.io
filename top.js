@@ -1,7 +1,7 @@
 let items = [
     {title: "HOME", link: "/"},
     {title: "JAVASCRIPT", link: "javascript"},
-    /* {title: "PICO-8", link: "lua"}, */
+    {title: "PICO-8", link: "lua"},
     {title: "PHOTOGRAPHY", link: "photography"},
     {title: "ART", link: "art"},
     {title: "ABOUT", link: "about"}
