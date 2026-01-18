@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="a7229c9f-4e47-40dd-9a31-112af3724e79"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js" integrity="sha512-bcfltY+lNLlNxz38yBBm/HLaUB1gTV6I0e+fahbF9pS6roIdzUytozWdnFV8ZnM6cSAG5EbmO0ag0a/fLZSG4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.min.js" integrity="sha512-WzkwpdWEMAY/W8WvP9KS2/VI6zkgejR4/KTxTl4qHx0utqeyVE0JY+S1DlMuxDChC7x0oXtk/ESji6a0lP/Tdg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
-    <title>Photography - GreyBeard42's Homepage</title>
-    <link rel="stylesheet" href="grey.css">
-    <link rel="icon" type="image/x-icon" href="images/favicon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset='utf-8'/>
-    <style>
+    <head>
+        <script defer src="https://cloud.umami.is/script.js" data-website-id="a7229c9f-4e47-40dd-9a31-112af3724e79"></script>
+        
+        <title>GreyBeard42's Homepage</title>
+        <link rel="stylesheet" href="grey.css">
+        <link rel="icon" type="image/x-icon" href="images/favicon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset='utf-8'/>
+        <style>
       .images div {
         display: flex;
         width: 100%;
@@ -66,18 +64,46 @@
         z-index: 15;
       }
     </style>
-  </head>
-	<body>
-    <script src="top.js"></script>
-    
-    <!--TITLE-->
-    <h1 class="hometitle">PHOTOGRAPHY</h1>
-    <p>Click image to view enlargened</p>
-    
-    <div class="content" id='content'></div>
+    </head>
+    <body>
+        <div id="overlay">
+            <script src="top.js"></script>
+            <div id=side>
+                <div class="camspecs">
+                    <a>Camera Specs</a>
+                    <br>
+                    <a>Nikon d5000:</a>
+                    <a>12.3 Megapixels,</a>
+                    <a>1/4000-30 shutter</a>
+                    <br>
+                    <a>Wide Lens (most shots):</a>
+                    <a>18-55mm,</a>
+                    <a>f/3.5-5.6G,</a>
+                    <a>AF-S</a>
+                    <br>
+                    <a>Sigama Lens</a>
+                    <a>70-300mm,</a>
+                    <a>f/4-5.6,</a>
+                    <a>AF-S</a>
+                    <img src="images/camera.png" style="filter: brightness(167%);"> <!-- 67 never dies -->
+                </div>
 
-    <div id="big" style="display: none;"><img id="close" src="images/close.png"><img id="bigimg" src="images/photography/aug24/CSC_0531-min.JPG"></div>
+                <div id="socials">
+                <a href="https://greybeard4200.itch.io/" target="_blank"><img src="images/social_1.png" title="Itch"></a>
+                <a href="https://github.com/greybeard42" target="_blank"><img src="images/social_0.png" title="GitHub"></a> 
+                <a href="https://www.youtube.com/@greybeard4200" target="_blank" class="oldsocial"><img src="images/social_4.png" title="YouTube (Old)"></a>
+                <a href="https://www.pixilart.com/greybeard42" target="_blank" class="oldsocial"><img src="images/social_3.png" title="Pixilart (Old)"></a>
+                </div>
+            </div>
+        </div>
 
-    <script src='photography.js'></script>
-  </body>
+        <div name="page" style="padding: calc(5vh + 30px) 0 0 calc(min(200px, 40vw) + 30px);">
+            <div class="content" id='content'></div>
+            <div id="big" style="display: none;"><img id="close" src="images/close.png"><img id="bigimg" src="images/photography/aug24/CSC_0531-min.JPG"></div>
+            <script src="photography.js"></script>
+        </div>
+        
+
+        <script src="content.js"></script>
+    </body>
 </html>

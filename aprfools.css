@@ -6,8 +6,10 @@
   --topnavbg: #680838;
   --topnavtxt: #d480ab;
   --placeholder: #874057;
+  --tag: #e3a9c7;
+  --whitebackground: #1a020e;
 }
 
-img {
-    filter: invert(1);
+img,.projectimage {
+  filter: invert(1);
 }
