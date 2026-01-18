@@ -12,46 +12,61 @@
         <meta charset='utf-8'/>
     </head>
     <body>
-        <script src="top.js"></script>
-        
-        <!--TITLE-->
-        <h1 class="hometitle" style="margin-bottom: 3vh;">ABOUT</h1>
-        
-        <div class="about">
-            <div class="socialsouter">
-                <p>Socials</p>
-                <div class="socials">
-                    <a href="https://github.com/greybeard42" target="_blank" style="border-right: solid 0.3vw; border-bottom: solid 0.3vw; border-top: solid 0.3vw;" onclick="umami.track('openedgithub')">
-                        <img src="images/social_0.png">
-                        <p>Github - GreyBeard42</p>
-                    </a>
-                    <a href="https://greybeard4200.itch.io" target="_blank" style="border-bottom: solid 0.3vw; border-top: solid 0.3vw;" onclick="umami.track('openeditch')">
-                        <img src="images/social_1.png">
-                        <p>Itch - GreyBeard4200</p>
-                    </a>
-                    <a href="https://www.youtube.com/@greybeard4200" target="_blank" style="border-right: solid 0.3vw;" onclick="umami.track('openedyoutube')">
-                        <img src="images/social_4.png">
-                        <p>Youtube - @GreyBeard4200</p>
-                    </a>
-                    <a href="https://www.pixilart.com/greybeard42" target="_blank" onclick="umami.track('openedpixilart')">
-                        <img src="images/social_3.png">
-                        <p>Pixilart - GreyBeard42</p>
-                    </a>
+        <div id="overlay">
+            <script src="top.js"></script>
+            <div id=side>
+                <a style="text-decoration: none;">Tags:</a>
+                <div id="tags"></div>
+                <script src="tags.js"></script>
+
+                <div id="socials">
+                <a href="https://greybeard4200.itch.io/" target="_blank"><img src="images/social_1.png" title="Itch"></a>
+                <a href="https://github.com/greybeard42" target="_blank"><img src="images/social_0.png" title="GitHub"></a> 
+                <a href="https://www.youtube.com/@greybeard4200" target="_blank" class="oldsocial"><img src="images/social_4.png" title="YouTube (Old)"></a>
+                <a href="https://www.pixilart.com/greybeard42" target="_blank" class="oldsocial"><img src="images/social_3.png" title="Pixilart (Old)"></a>
                 </div>
             </div>
-            <div class="bio">
-                <p>&emsp;I'm an experienced JavaScript programmer who likes old videogames. I'm mostly self taught besides some beginner javascript classes. I've been doing some form of coding since 2022. I started in scratch for a year, then started learning HTML and CSS. I began learning Javascript in 2024, mainly in <a href="https://p5js.org">p5.js</a>. I'm currently learning Lua for <a href="https://www.lexaloffle.com/pico-8.php">PICO-8</a></p>
-                <br>
-                <p>&emsp;My first browser game was an incremental game called <a href="/corncountry/game">Corn Country</a>. It was really just a <a href="https://orteil.dashnet.org/cookieclicker/">Cookie Clicker</a> knockoff with Corn Syrup and Popcorn. As this was my first JavaScript project, I followed <a href="https://www.youtube.com/watch?v=d-AbDEwpp6g&list=PLEyTwruuVAqlEvj8QxTFdVPc6_AwpgF2w">this tutorial</a> by <a href="https://www.youtube.com/@tanktotgames8873">Tanktot Games</a>. I've made <a href="/js?p=Corn%20Country%202">a proper sequel to Corn Country</a> in July 2025.</p>
-                <br>
-                <p>&emsp;This site is open source! You can view the repostiory on Github <a href="https://github.com/greybeard42/greybeard42.github.io">here</a>. My site has been hosted on a couple of different sites. This page was hosted on <a href="https://neocities.org/site/greybeard42">Neocities</a> for a year and a half, on 000webhost for a couple months, and has been hosted on Github Pages since September 29th, 2024. All of the code on this site is licensed under the <a href="https://github.com/GreyBeard42/greybeard42.github.io/blob/main/LICENSE">MIT License</a>.</p>
-                <br>
-                <u style="display: block;">I do not profit from this site in any way.</u>
-                <br>
-                <p style="font-size: 1vw;">Latest commit to this site: <br><span id="commit">fetching...</span></p>
-            </div>
         </div>
-        <script src="about.js"></script>
+        
+        <div name="page" style="padding: calc(5vh + 30px) 0 0 calc(min(200px, 40vw) + 30px); position: relative;">
+            <!--TITLE-->
+            <h1 style="font-size: 60px; margin-bottom: 15px;">ABOUT</h1>
+            
+            <div class="about">
+                <div class="socialsouter">
+                    <p>Socials</p>
+                    <div class="socials">
+                        <a href="https://github.com/greybeard42" target="_blank" style="border-right: solid 0.3vw; border-bottom: solid 0.3vw; border-top: solid 0.3vw;" onclick="umami.track('openedgithub')">
+                            <img src="images/social_0.png">
+                            <p>Github - GreyBeard42</p>
+                        </a>
+                        <a href="https://greybeard4200.itch.io" target="_blank" style="border-bottom: solid 0.3vw; border-top: solid 0.3vw;" onclick="umami.track('openeditch')">
+                            <img src="images/social_1.png">
+                            <p>Itch - GreyBeard4200</p>
+                        </a>
+                        <a href="https://www.youtube.com/@greybeard4200" target="_blank" style="border-right: solid 0.3vw;" onclick="umami.track('openedyoutube')">
+                            <img src="images/social_4.png">
+                            <p>Youtube - @GreyBeard4200</p>
+                        </a>
+                        <a href="https://www.pixilart.com/greybeard42" target="_blank" onclick="umami.track('openedpixilart')">
+                            <img src="images/social_3.png">
+                            <p>Pixilart - GreyBeard42</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="bio">
+                    <p>&emsp;I'm a JavaScript hobbyist. I'm mostly self taught besides some beginner javascript classes. I've been doing some form of coding since 2022. I started in scratch for a year, then started learning HTML and CSS. I began learning Javascript in 2024, mainly in <a href="https://p5js.org">p5.js</a>. I'm currently learning Lua for <a href="https://www.lexaloffle.com/pico-8.php">PICO-8</a></p>
+                    <br>
+                    <p>&emsp;This site is open source! You can view the repostiory on Github <a href="https://github.com/greybeard42/greybeard42.github.io">here</a>. My site has been hosted on a couple of different sites. This page was hosted on <a href="https://neocities.org/site/greybeard42">Neocities</a> for a year and a half, on 000webhost for a couple months, and has been hosted on Github Pages since September 29th, 2024. All of the code on this site is licensed under the <a href="https://github.com/GreyBeard42/greybeard42.github.io/blob/main/LICENSE">MIT License</a>.</p>
+                    <br>
+                    <u style="display: block;">I do not profit from this site in any way.</u>
+                    <br>
+                    <p style="font-size: 1vw;">Latest commit to this site: <br><span id="commit">fetching...</span></p>
+                </div>
+            </div>
+            <script src="about.js"></script>
+        </div>
+        
         <script src="content.js"></script>
 	</body>
 </html>
