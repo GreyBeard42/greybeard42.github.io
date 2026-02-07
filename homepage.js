@@ -93,7 +93,7 @@ async function ahah(p, parent=document.getElementById("page"),tags=undefined) {
 }
 
 function getMaxProjectsPerRow() {
-  let padding = Math.min(200, 0.4 * window.innerWidth) + 30
+  let padding = Math.min(200, 0.4 * window.innerWidth) + 10
   let available = window.innerWidth - padding
-  return Math.max(Math.floor((available+5)/(210+5)), 3)
+  return Math.max(Math.floor((available+5)/(210+5)), 2)
 }
