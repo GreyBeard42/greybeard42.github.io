@@ -2,14 +2,7 @@
 
 My personal Homepage featuring JavaScript Games, Pixel Art, and Photography.
 
-[Check it out!](https://greybeard42.github.io)
-
-My site used to be hosted on [Neocities](https://neocities.org) until I switched to Github Pages :')
-Just a bit of history.
-
-All of the assets are made by me using Piskel or Fontstruct.
-
-Enjoy, I suppose.
+[greybeard42.github.io](https://greybeard42.github.io) (Quicker updates)  OR [greybeard424242.web.app](https://greybeard424242.web.app) (Firebase manualy updated)
 
 ![preview.png](preview.png)
 
