@@ -3,20 +3,22 @@
     <head>
         <script defer src="https://cloud.umami.is/script.js" data-website-id="a7229c9f-4e47-40dd-9a31-112af3724e79"></script>
         
-        <title>Explore - GreyBeard42's Homepage</title>
-	    <link rel="stylesheet" href="/grey.css">
-        <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+        <title>Music - GreyBeard42's Homepage</title>
+        <link rel="stylesheet" href="grey.css">
+        <link rel="icon" type="image/x-icon" href="images/favicon.png">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset='utf-8'/>
+        <style>
+            audio {display: block; margin: 8px 0;}
+        </style>
     </head>
-	<body>
+    <body>
         <div id="overlay">
             <script src="top.js"></script>
             <div id=side>
                 <a style="text-decoration: none;">Tags:</a>
                 <div id="tags"></div>
-                <a href="photography">Photography</a>
-                <a href="art">Pixel Art</a>
+                <script src="tags.js"></script>
 
                 <div id="socials">
                 <a href="https://greybeard4200.itch.io/" target="_blank"><img src="images/social_1.png" title="Itch"></a>
@@ -26,12 +28,17 @@
                 </div>
             </div>
         </div>
-        
-        <div id="page" style="text-align: left;">
-            <p style="display:inline" id="querybox">Searching...</p>
-            <div id="results"></div>
-            <script src="project.js"></script>
-            <script src="explore.js"></script>
+
+        <div id="page">
+            <h1 style="text-align: left;">Music</h1>
+            <audio controls src="music/Whats a quartal.mp3"></audio>
+            <audio controls src="music/Satin Doll.mp3"></audio>
+            <audio controls src="music/christmas.mp3"></audio>
+            <audio controls src="music/lol what am i doing.mp3"></audio>
+            <audio controls src="music/Dont Fall.mp3"></audio>
+            <audio controls src="music/twitch (1).mp3"></audio>
+            <audio controls src="music/weird beat idk.mp3"></audio>
+            <audio controls src="music/Blues Scale thing.mp3"></audio>
         </div>
 
         <script src="content.js"></script>

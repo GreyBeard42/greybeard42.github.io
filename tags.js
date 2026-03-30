@@ -18,6 +18,10 @@ fetch("tags.json")
 
     let side = document.getElementById("side")
     let link = document.createElement("a")
+    link.href= "music"
+    link.innerText = "Music"
+    side.appendChild(link)
+    link = document.createElement("a")
     link.href= "photography"
     link.innerText = "Photography"
     link.style="margin-top: 10px;"

@@ -138,10 +138,12 @@ input:focus {outline: none;}
   flex: 1;
 }
 #side a {
-  margin: 0;
   display: block;
   text-decoration: underline;
   pointer-events: auto;
+}
+#side > a {
+  margin: 8px 0;
 }
 #side a:hover {
   color: var(--link);
@@ -254,7 +256,6 @@ input:focus {outline: none;}
 
 /* EXPLORE */
 #tags {
-  margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
   gap: 0 4px;
