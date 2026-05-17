@@ -18,7 +18,7 @@ fetch("tags.json")
 
     let side = document.getElementById("side")
     let link = document.createElement("a")
-    link.href= "music"
+    link.href= "https://soundcloud.com/greybeard42"
     link.innerText = "Music"
     side.appendChild(link)
     link = document.createElement("a")
